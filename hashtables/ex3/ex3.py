@@ -2,9 +2,20 @@ def intersection(arrays):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    cache = {}
+    length = len(arrays)
 
-    return result
+    # count occurrences and save to cache
+    for array in arrays:
+        for num in array:
+            if num in cache:
+                cache[num] += 1
+            else:
+                cache[num] = 1
+
+    # return nums from cache which occur in all arrays
+    return [num[0] for num in cache.items() if num[1] is length]
+
 
 
 if __name__ == "__main__":
