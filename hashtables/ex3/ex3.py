@@ -3,6 +3,14 @@ def intersection(arrays):
     YOUR CODE HERE
     """
     # Your code here
+    o = dict()
+    for i in arrays:
+        for j in i:
+            if j in o:
+                o[j] += 1
+            else:
+                o[j] = 1
+    result = [data[0] for data in o.items() if data[1] == len(arrays)]
 
     return result
 
