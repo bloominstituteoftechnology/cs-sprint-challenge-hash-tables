@@ -2,8 +2,15 @@ def intersection(arrays):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    table = {}
+    for arr in arrays:
+        for i in arr:
+            if i in table:
+                table[i] += 1
+            else:
+                table[i] = 1
 
+    result = [x for x in table if table[x]==len(arrays)]
     return result
 
 
