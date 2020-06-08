@@ -1,8 +1,21 @@
+
+
 def intersection(arrays):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    cache = {}
+    n_list = len(arrays)
+    result = []
+
+    for n in arrays:
+        for i in n:
+            if i not in cache:
+                cache[i] = 1
+            else:
+                cache[i] +=1
+                if cache[i] == n_list:
+                    result.append(i)
 
     return result
 
