@@ -15,6 +15,7 @@ class TestEx1(unittest.TestCase):
         answer_2 = get_indices_of_item_weights(weights_2, 2, 8)
         self.assertTrue(answer_2[0] == 1)
         self.assertTrue(answer_2[1] == 0)
+       
 
     def test_ex1_3(self):
         weights_3 = [4, 6, 10, 15, 16]

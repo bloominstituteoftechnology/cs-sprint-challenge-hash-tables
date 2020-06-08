@@ -1,8 +1,29 @@
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    # Initialize hash table for storage
+    dictionary = {}
+    result = []
+
+    # Loop through the list of arrays
+    for array in arrays:
+        # Loop through each item in the array
+        for item in array:
+            # If this value is in the dictionary, append the count
+            if item in dictionary:
+                dictionary[item] +=1
+            # Item is not in the dictionary, initialize a count
+            else:
+                dictionary[item] = 1
+
+    # Loop through the items in the dictionary
+
+    for val in dictionary:
+        # print(f'value:{dictionary[val]}, array length: {len(arrays)}')
+
+        # If the item count is equal to the number of lists
+        # Then that item must exist in all the sub-arrays
+        if dictionary[val] == len(arrays):
+            # Add the value to the result
+            result.append(val)
 
     return result
 
