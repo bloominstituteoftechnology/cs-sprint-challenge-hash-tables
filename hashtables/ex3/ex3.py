@@ -1,10 +1,19 @@
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    table = {}
+    results = []
+    for index, values in enumerate(arrays):
+        for value in values:
+            try:
+                table[value] += 1
+            except:
+                if index == 0:
+                    table[value] = 1
+    for key in table.keys():
+        if table[key] == len(arrays):
+            results.append(key)
 
-    return result
+    return results  
+        
 
 
 if __name__ == "__main__":

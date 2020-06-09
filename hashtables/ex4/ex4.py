@@ -2,7 +2,17 @@ def has_negatives(a):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    table = {}
+    result = []
+    for number in a:
+        if number < 0:
+            table[number] = True
+    for number in a:
+        try:
+            if table[-number]:
+                result.append(number)
+        except:
+            pass
 
     return result
 
