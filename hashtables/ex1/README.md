@@ -3,8 +3,7 @@
 Given a package with a weight limit `limit` and a list `weights` of item
 weights, implement a function `get_indices_of_item_weights` that finds
 two items whose sum of weights equals the weight limit `limit`. Your
-function will return an instance of an `Answer` tuple that has the
-following form:
+function will return a tuple of integers that has the following form:
 
 ```
 (zero, one)
