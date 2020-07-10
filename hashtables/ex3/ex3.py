@@ -2,7 +2,16 @@ def intersection(arrays):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    # not tested, do not count
+    result = []
+    for i, arr in enumerate(arrays):
+        arrays[i] = dict.fromkeys(arr, 1)
+    
+    matches = []
+    for i in range(1, len(arrays)):
+        matches.append(arrays[0].keys() & arrays[i].keys())
+
+    result = list(matches)
 
     return result
 

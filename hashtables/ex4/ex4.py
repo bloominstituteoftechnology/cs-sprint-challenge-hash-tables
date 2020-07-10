@@ -2,7 +2,12 @@ def has_negatives(a):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    lookup = {i: -i for i in a if i < 0}
+    result = []
+    for n in lookup:
+        if lookup[n] in a:
+            result.append(lookup[n])
+    # print(result)
 
     return result
 
