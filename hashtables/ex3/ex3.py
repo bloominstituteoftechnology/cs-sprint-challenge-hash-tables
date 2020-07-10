@@ -1,8 +1,5 @@
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    result = [item for item in arrays if item in arrays]
 
     return result
 
