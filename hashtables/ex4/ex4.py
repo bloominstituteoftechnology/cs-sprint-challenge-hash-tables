@@ -2,9 +2,21 @@ def has_negatives(a):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    dict = {}
 
-    return result
+    positives = list(filter(lambda x: x > 0, a))
+
+    for x in a:
+        if -x in positives:
+            dict[-x] = True
+
+    # Slower
+    # for x in a:
+    #     for y in a:
+    #         if x > 0 and y == -x:
+    #             dict[x] = True
+
+    return list(dict.keys())
 
 
 if __name__ == "__main__":
