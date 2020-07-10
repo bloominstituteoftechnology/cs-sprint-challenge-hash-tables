@@ -1,32 +1,14 @@
 def has_negatives(a):
-    # for this question im going to take a quick and dirty approch
-    # if the number is above 0 then check if n* -1 is in array, if true apppend
-    # to the output list, if false pass to next element
+    # define a hash table where the key is the values in the list and the value
+    # for those keys are one
+    cache = {k: 1 for k in a}
 
-    output = []
-    for i in a:
-        if i > 0:
-            if (i * -1) in a:
-                output.append(i)
-            else:
-                pass
-        else:
-            pass
-    return output
+    # make a list of keys from the cache if the negitive is in the cache and if
+    # the value is greater the 0
+    result = [k for k, v in cache.items() if (k * -1) in cache and k > 0]
 
+    return result
 
-# this solution is O(n^2) because we are technically indexing the list twice,
-# once when we iterate through the list, and again when we check if -i is in a
-# since the second loop is within the first its get the exponent treatment
-# no this might not actually be a O(n^2) because I don't know what the
-# data structure is for the (n is in array) im assuming that opperation is O(n)
 
 if __name__ == "__main__":
     print(has_negatives([-1, -2, 1, 2, 3, 4, -4]))
-
-# AFTER THE FACT NOTE:
-# this takes literally forever to run so def a O(n^2)
-# further improvments would be use a lookup table and see if there are cache
-# optimizations that can be done to improve runtime
-# also using multiple threads would be nice, bi-passing python's gli with the
-# multiprocessing library is an option also

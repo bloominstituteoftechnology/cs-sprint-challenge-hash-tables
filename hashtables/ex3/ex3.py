@@ -22,10 +22,10 @@ def intersection(arrays):
 
     # make a count table
     for i in a:
-        if str(i) not in seen.keys():
-            seen[str(i)] = 1
+        if i not in seen:
+            seen[i] = 1
         else:
-            seen[str(i)] += 1
+            seen[i] += 1
 
     print("COUNT TABLE VALUES OVER 1:",
           [f"k:{k} v:{v}" for k, v in seen.items() if v > 1])
@@ -37,7 +37,7 @@ def intersection(arrays):
     # matrix this is a naive assumption but it should work for this application
     for k, v in seen.items():
         if (v == n) or (v > n):
-            result.append(k)
+            result.append(int(k))
 
     print("OUTPUT:", result)
 
@@ -52,5 +52,8 @@ if __name__ == "__main__":
     # from the test here, but when I run the test it fails? unfortunatly
     # I would try to answer that question but I ran out of time on this
     # problem
-    arrays = [[1, 2, 3], [1, 4, 5, 3], [1, 6, 7, 3]]
+    arrays = [
+        [1, 2],
+        [1],
+    ]
     print(intersection(arrays))

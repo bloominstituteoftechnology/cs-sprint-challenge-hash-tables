@@ -2,23 +2,21 @@
 
 
 def finder(files, queries):
-    # everything is provided so im not going to need blob or os or os.path
-    # this looks like a simple string operation to comparison.
-    # making the file paths into a flattend list of elements without path seps
+    # make a cache where the key value is the file name without the path
+    cache = {k.split('/')[-1]: [] for k in files}
     result = []
-    files = flatten([x.split('/') for x in files])
-    for i in queries:
-        if i in files:
-            result.append(i)
-        else:
-            pass
+
+    # loop over all of the paths that we have and save it to the key of the cache
+    for f in files:
+        f_type = f.split('/')[-1]
+        cache[f_type].append(f)
+    # check the quaries and see if they match a key in the cache if so then
+    # return that full file path
+    for q in queries:
+        if q in cache:
+            result += cache[q]
+
     return result
-
-
-def flatten(l):
-    """Takes a nth dimensional array `l` and makes it into a 1d array
-    """
-    return [y for x in l for y in x]
 
 
 if __name__ == "__main__":
