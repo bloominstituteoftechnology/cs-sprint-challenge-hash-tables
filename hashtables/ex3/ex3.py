@@ -1,8 +1,32 @@
 def intersection(arrays):
     """
-    YOUR CODE HERE
+    Finds the intersection between multiple lists of integers
     """
-    # Your code here
+    # create cache to save the "seen" numbers
+    cache = {}
+
+    # get the total number of lists to look through
+    num_list = len(arrays)
+
+    # create a list to store the intersection values
+    result = []
+    
+    # loop through each list
+    for lst in arrays:
+        # loop through each item in that list
+        for item in lst:
+            # add the item in cache if it's not there (as key)
+            # count in how many lists is the item present (as value)
+            if item not in cache:
+                cache[item] = 1
+            else:
+                # if the element in already in cash,
+                # increment its value by 1
+                cache[item] += 1
+                # did the item count reach the total number of lists?
+                # if yes, add the number in the result list
+                if cache[item] == num_list:
+                    result.append(item)
 
     return result
 
