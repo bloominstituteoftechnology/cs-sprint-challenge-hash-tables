@@ -4,20 +4,27 @@ def intersection(arrays):
     """
     # Your code here
     result = []
-    dict = {}
-    count = len(arrays)
+    # dict = {}
+    # count = len(arrays)
 
-    for list in arrays:
-        hold = []
-        for item in list:
-            if item not in hold:
-                dict[item] = 1 if item not in dict else dict[item] + 1
-                hold.append(item)
+    # for list in arrays:
+    #     hold = []
+    #     for item in list:
+    #         if item not in hold:
+    #             dict[item] = 1 if item not in dict else dict[item] + 1
+    #             hold.append(item)
+    #
+    # for k, v in dict.items():
+    #     if v == count: result.append(k)
+    # return result
 
-    for k, v in dict.items():
-        if v == count: result.append(k)
+    for item in arrays[0]:
+        is_present = True
+        for list in arrays:
+            if item not in list: is_present = False
+        if is_present: result.append(item)
+
     return result
-
 
 if __name__ == "__main__":
     arrays = []
