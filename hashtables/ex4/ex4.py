@@ -4,8 +4,6 @@ def has_negatives(a):
     YOUR CODE HERE
     """
     # Your code here
-    negcache = {}
-    poscache = {}
     cache = {}
     result = []
     for num in a:
