@@ -9,11 +9,11 @@ def intersection(arrays):
     #continue through lists checking if items in intersections is in current
     chill = None
     for i in range(len(arrays)):
-        arrays[i] = set(arrays[i])
+        arrays[i] = {x : x for x in arrays[i]}
         if i == 0:
             chill = arrays[i]
         else:
-            temp = chill.intersection(arrays[i])
+            temp = {x: chill[x] for x in chill if x in arrays[i]}
             chill = temp
     result = list(chill)
     return result
