@@ -61,8 +61,8 @@ For each problem that you choose to solve, complete the following:
 
 After finishing your required elements, you can push your work further. These goals may or may not be things you have learned in this module, but they build on the material you just studied. Time allowing, stretch your limits, and see if you can deliver on the following optional goals:
 
-- [ ] Solve any four of the five problems
-- [ ] Solve all five problems
+- [X] Solve any four of the five problems
+- [X] Solve all five problems
 
 ## Submission format
 
