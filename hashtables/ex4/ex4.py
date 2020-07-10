@@ -6,17 +6,16 @@ def has_negatives(a):
     # Your code here
     negcache = {}
     poscache = {}
+    cache = {}
     result = []
     for num in a:
-        if num not in negcache and num < 0:          # create negative cache
-            negcache[num] = num
-        elif num not in poscache and num > 0:          # create positive cache
-            poscache[num] = num
-
-    for fromPos in poscache:
-        if -fromPos in negcache:                        # compare positive cache to negative cache
-            result.append(fromPos)                      # append positive number to result if there exists negative number in neg cache
-
+        if -num in cache:                                   # if num has an opposite number of itself in cache
+            if num < 0:
+                result.append(-num)                        # if num is negative, append the positive version
+            else:
+                result.append(num)
+        else:                                              # if there is not an opposite number, cache the current number
+            cache[num] = num                
     return result
 
 
