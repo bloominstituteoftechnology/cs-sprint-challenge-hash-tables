@@ -3,18 +3,18 @@ def intersection(arrays):
     YOUR CODE HERE
     """
     # Your code here
-    common_int = dict()
+    storage = dict()
     result = []
 
     for a in arrays:        
         for num in a:
-            if num in common_int:
-                common_int[0] += 1
+            if num in storage:
+                storage[0] += 1
             else:
-                common_int[0] = 1
+                storage[0] = 1
 
-            for num in common_int:                
-                result = [num for num in common_int]
+            for num in storage:                
+                result = [num for num in storage]
 
     return result
 
