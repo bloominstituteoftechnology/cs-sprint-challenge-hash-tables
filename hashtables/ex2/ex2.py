@@ -3,7 +3,11 @@ class Ticket:
     def __init__(self, source, destination):
         self.source = source
         self.destination = destination
-
+class LinkedList:
+    def __init__(self, key, value):
+        self.key = key
+        self.value = value
+        self.next = None
 
 class HashTable:
     def __init__(self, capacity):
@@ -11,12 +15,12 @@ class HashTable:
         self.storage = [None] * capacity
 
 
-def hash(x, max):
-   x = ((x >> 16) ^ x) * 0x45d9f3b
-   x = ((x >> 16) ^ x) * 0x45d9f3b
-   x = ((x >> 16) ^ x)
+def hash(string, max):
+    hash = 5381
+    for char in string:
+        hash = ((hash << 5) + hash) + ord(char)
 
-   return x % max
+    return hash % max
 
 
 def add(hash_table, key, value):
@@ -53,20 +57,21 @@ def reconstruct_trip(tickets, length):
     YOUR CODE HERE
     """
     # Your code here
-    # tickets == HashTable
-    # length ==
-    # should return an array of strings with the entire route
-    new_hash_table = HashTable(length)
-    route = [None] * (length * 1)
+    hashtable = HashTable(length)
+    route = [None] * length
 
-    # traverse the tickets list and add each ticket
-    for item in tickets:
-        add(new_hash_table, item.source, item.destination)
-    
-    current_ticket = get(new_hash_table, "NONE")
+    for i in tickets:
+        add(hashtable, i.source, i.destination)
 
-    for i in range(0, length - 1):
+    # initialize key to NONE and iterate through tickets, updating new key as previous value
+
+    key = "NONE"
+
+    for i in range(length):
+        current_ticket = get(hashtable, key)
+        key = current_ticket
         route[i] = current_ticket
-        current_ticket = get(new_hash_table, current_ticket)
 
+    # remove the final NONE
+    route.pop()
     return route
