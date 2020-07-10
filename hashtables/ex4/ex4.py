@@ -7,13 +7,14 @@ def has_negatives(a):
     dict = {}
 
     for num in a:
-        final = num if num > 0 else num * -1
+        final = abs(num)
         if final in dict:
             result.append(final)
         else:
             dict[final] = 1
 
     return result
+
 
 
 if __name__ == "__main__":
