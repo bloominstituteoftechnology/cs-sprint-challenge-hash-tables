@@ -1,10 +1,23 @@
-def intersection(arrays):
+def intersection(lists):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    length = len(lists)
+    my_dict = {}
+    for array in lists:
+      for num in array:
+        if num not in my_dict:
+          my_dict[num] = 1
+        else:
+          my_dict[num] += 1
 
-    return result
+    ans = []
+
+    for item in list(my_dict.items()):
+      if item[1] == length:
+        ans.append(item[0])
+
+    return ans
 
 
 if __name__ == "__main__":
