@@ -1,17 +1,38 @@
 def intersection(arrays):
 
-    num_arrays = len(arrays)
-    dict = {}
+    dicts = []
 
     for array in arrays:
+        dict = {}
         for i in array:
-            if i in dict:
+            dict[i] = True
+        dicts.append(dict)
 
+    in_all = True
+    result = []
+    for item in dicts[0].keys():
+        #print(dicts[0].keys())
+        #print(item)
+        for dict in dicts:
+            if item in dict:
+                pass
+                #print(item, "in dictionary so far")
             else:
-                dict[i] = array.count(i)
+                # print(item, "not")
+                in_all = False
+
+        if in_all == True:
+            #print(item, "is officially in dictionary")
+            result.append(item)
+        else:
+            pass
+            #print(item, "not in all dictionaries")
+        in_all = True
+
+    #print(result)
+    return result
 
 
-    # return result
 
 
 if __name__ == "__main__":
