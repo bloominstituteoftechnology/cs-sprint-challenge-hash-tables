@@ -14,6 +14,9 @@ def has_negatives(a):
             pass
     return output
 
+# Think about storing the numbers in a dictionary and then looping through to see if the stored numbers have a negative counterpart - Dylan
+# PS if you open a pull request from you branch to master I can leave reviews without having to leave a comment in your code like this
+
 
 # this solution is O(n^2) because we are technically indexing the list twice,
 # once when we iterate through the list, and again when we check if -i is in a
