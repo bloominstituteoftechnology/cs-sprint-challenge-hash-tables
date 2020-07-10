@@ -2,8 +2,20 @@ def intersection(arrays):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    result = []
+    dictionary = dict()
 
+    for array in arrays: 
+        for i in array:
+              
+            if i in dictionary:
+                dictionary[i] += 1
+            else:
+                dictionary[i] = 1
+
+    for i in dictionary.items():
+        if i[1] == len(arrays):
+            result.append(i[0])
     return result
 
 
