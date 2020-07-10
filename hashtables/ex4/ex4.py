@@ -2,9 +2,9 @@ def has_negatives(a):
     """
     YOUR CODE HERE
     """
-    # Your code here
-
-    return result
+    # not sure if a set is allowed so using dict...
+    negatives = {num: True for num in a if num < 0}
+    return [num for num in a if num > 0 and -num in negatives]
 
 
 if __name__ == "__main__":
