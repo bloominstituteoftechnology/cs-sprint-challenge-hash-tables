@@ -14,25 +14,30 @@ def reconstruct_trip(tickets, length):
    
     route = [0] * length
     cache = {}
- 
+    
+    #loop thru tickets and cache destination as source
     for t in tickets:
         cache[t.source] = t.destination
+   
+    # departure set to 'NONE's destination
+    dep = cache['NONE']
     
-    last = cache['NONE']
-    
+    # loop through flights, setting destination from source
     for i in range(0, length):
-        route[i] = last 
-        last = cache[last]
+        route[i] = dep 
+        dep = cache[dep]
 
     return route
 
 # ticket_1 = Ticket("PDX", "DCA")
 # ticket_2 = Ticket("NONE", "PDX")
-# ticket_3 = Ticket("DCA", "NONE")
+# ticket_3 = Ticket("DCA", "BEN")
+# ticket_4 = Ticket("BEN", "WAS")
+# ticket_5 = Ticket("WAS", "NONE")
 
-# tickets = [ticket_1, ticket_2, ticket_3]
+# tickets = [ticket_1, ticket_2, ticket_3, ticket_4, ticket_5]
 
-# print(reconstruct_trip(tickets, 3))
+# print(reconstruct_trip(tickets, 5))
 
 
 
