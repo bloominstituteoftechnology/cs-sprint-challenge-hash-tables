@@ -49,6 +49,8 @@ def intersection(arrays):
 
 if __name__ == "__main__":
     # heres an interesting question why is it that I get the right answers
-    # from the test here, but when I run the test it fails?
+    # from the test here, but when I run the test it fails? unfortunatly
+    # I would try to answer that question but I ran out of time on this
+    # problem
     arrays = [[1, 2, 3], [1, 4, 5, 3], [1, 6, 7, 3]]
     print(intersection(arrays))
