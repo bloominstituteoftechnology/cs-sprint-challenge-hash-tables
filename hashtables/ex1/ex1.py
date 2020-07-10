@@ -6,9 +6,10 @@ def get_indices_of_item_weights(weights, length, limit):
     weight_dict = {}
     one = None
     two = None
+    if length < 2:
+        return None
     for i in range(length):
         if weights[i] not in weight_dict:
-        # weight_dict[weights[i]] = i
             weight_dict.setdefault(weights[i], [i])
         else:
             weight_dict[weights[i]].append(i)
@@ -19,14 +20,13 @@ def get_indices_of_item_weights(weights, length, limit):
                 one = weight_dict[answer][0]
                 two = weight_dict[answer][1]
             else:
-                
-        # if answer in weight_dict:
-        #     if answer is weight_dict[answer]:
-        #         return weight_dict[answer][1], weight_dict[answer][0]
-        #     else:
-        #         return weight_dict[answer], i
-    
+                one = weight_dict[weights[i]][0]
+                two = weight_dict[answer][0]
+    result = [one, two]
+    result.sort(reverse=True)
 
-weights_2 = [4, 4]
-answer2 = get_indices_of_item_weights(weights_2, 2, 8)
-print(answer2)
+    return result[0], result[1]
+
+weights_4 = [12, 6, 7, 14, 19, 3, 0, 25, 40]
+answer_4 = get_indices_of_item_weights(weights_4, 9, 7)
+print(f"Answer[0]: {answer_4[0]}, Answer[1]: {answer_4[1]}")
