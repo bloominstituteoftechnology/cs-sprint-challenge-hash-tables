@@ -1,3 +1,36 @@
+# First Pass Naive Solution
+
+# def get_indices_of_item_weights(weights, length, limit):
+#     """
+#     YOUR CODE HERE
+#     """
+#     # Your code here
+#     weight_dict = {}
+#     one = None
+#     two = None
+#     if length < 2:
+#         return None
+#     for i in range(length):
+#         if weights[i] not in weight_dict:
+#             weight_dict.setdefault(weights[i], [i])
+#         else:
+#             weight_dict[weights[i]].append(i)
+#     for i in range(length):
+#         answer = limit - weights[i]
+#         if answer in weight_dict:
+#             if len(weight_dict[answer]) > 1:
+#                 one = weight_dict[answer][0]
+#                 two = weight_dict[answer][1]
+#             else:
+#                 one = weight_dict[weights[i]][0]
+#                 two = weight_dict[answer][0]
+#     result = [one, two]
+#     result.sort(reverse=True)
+
+#     return result[0], result[1]
+
+# Second Pass Solution
+
 def get_indices_of_item_weights(weights, length, limit):
     """
     YOUR CODE HERE
@@ -9,24 +42,22 @@ def get_indices_of_item_weights(weights, length, limit):
     if length < 2:
         return None
     for i in range(length):
-        if weights[i] not in weight_dict:
-            weight_dict.setdefault(weights[i], [i])
-        else:
-            weight_dict[weights[i]].append(i)
+        weight_dict[weights[i]] = i
+
     for i in range(length):
         answer = limit - weights[i]
         if answer in weight_dict:
-            if len(weight_dict[answer]) > 1:
-                one = weight_dict[answer][0]
-                two = weight_dict[answer][1]
-            else:
-                one = weight_dict[weights[i]][0]
-                two = weight_dict[answer][0]
-    result = [one, two]
-    result.sort(reverse=True)
-
-    return result[0], result[1]
-
+            one = weight_dict[answer]
+            two = i
+            result = [one, two]
+            result.sort(reverse=True)
+            return result[0], result[1]
+            
+import time
+start_time = time.time()
+time.sleep(1.0)
 weights_4 = [12, 6, 7, 14, 19, 3, 0, 25, 40]
 answer_4 = get_indices_of_item_weights(weights_4, 9, 7)
 print(f"Answer[0]: {answer_4[0]}, Answer[1]: {answer_4[1]}")
+end_time = time.time()
+print(f"Solution took {end_time - start_time}")
