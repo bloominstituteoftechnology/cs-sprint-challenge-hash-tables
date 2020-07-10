@@ -1,22 +1,21 @@
 def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
+    # Why is this slow?
+    # dict = {}
+    # positives = list(filter(lambda x: x > 0, a))
+    # for x in positives:
+    #     if -x in a:
+    #         dict[x] = True
+    #
+    # return list(dict.keys())
+
     dict = {}
+    l = []
+    for i in a:
+        dict[i] = i
+        if -i in dict and i != 0:
+            l.append(abs(i))
+    return l
 
-    positives = list(filter(lambda x: x > 0, a))
-
-    for x in a:
-        if -x in positives:
-            dict[-x] = True
-
-    # Slower
-    # for x in a:
-    #     for y in a:
-    #         if x > 0 and y == -x:
-    #             dict[x] = True
-
-    return list(dict.keys())
 
 
 if __name__ == "__main__":

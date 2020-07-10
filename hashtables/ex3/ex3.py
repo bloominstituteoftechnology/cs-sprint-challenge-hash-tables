@@ -1,10 +1,17 @@
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
 
-    return result
+    num_arrays = len(arrays)
+    dict = {}
+
+    for array in arrays:
+        for i in array:
+            if i in dict:
+
+            else:
+                dict[i] = array.count(i)
+
+
+    # return result
 
 
 if __name__ == "__main__":
