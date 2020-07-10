@@ -10,8 +10,8 @@ def intersection(arrays):
                 o[j] += 1
             else:
                 o[j] = 1
+    #Add them up
     result = [data[0] for data in o.items() if data[1] == len(arrays)]
-
     return result
 
 
