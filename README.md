@@ -46,14 +46,14 @@ We expect you to be able to answer questions in these areas. Your responses cont
 
 Your finished project must include all of the following requirements:
 
-- [ ] Solve any three of the five problems
+- [X] Solve any three of the five problems
 
 For each problem that you choose to solve, complete the following:
 
 - [X] Navigate into each exercise's directory
 - [X] Read the instructions for the exercise in the README
 - [X] Implement your solution in the `.py` skeleton file
-- [ ] Make sure your code passes the tests running the test script with make tests
+- [X] Make sure your code passes the tests running the test script with make tests
 
 *Note: For these exercises, we expect you to use Python's built-in `dict` as a hashtable. That said, if you wish, you can attempt to solve using your own hashtable implementation, as well. All solutions should utilize a `dict` or hashtable. You should not use Sets. (Though you can make a `dict` behave like a set if you wish.)*
 
