@@ -1,54 +1,48 @@
 weights = [4, 6, 10, 15, 16]
 
-weight_storage = {}
 
-weight_idxs = []
+# def build_weights_table(weights):
 
+#     for idx, weight in enumerate(weights):
 
-def build_weights_table(weights):
+#         if weight not in weight_storage:
+#             weight_storage[weight] = idx
+#         else:
+#             array = list(map(int, str(weight_storage[weight])))
+#             print(array)
+#             array.append(idx)
+#             print(array)
+#             weight_storage[weight] = array
 
-    for idx, weight in enumerate(weights):
-
-        if weight not in weight_storage:
-            weight_storage[weight] = idx
-        else:
-            array = list(map(int, str(weight_storage[weight])))
-            print(array)
-            array.append(idx)
-            print(array)
-            weight_storage[weight] = array
-
-    return weight_storage
+#     return weight_storage
 
 
 def get_indices_of_item_weights(weights, length, limit):
 
-    build_weights_table(weights)
+    weight_storage = {}
 
-    if length == 1:
-        return None
+    for idx in range(length):
 
-    for weight in weights:
+        diff = limit - weights[idx]
 
-        diff = limit - weight
+        if diff in weight_storage:
 
-        if diff not in weight_storage:
+            pair = weight_storage[diff]
 
-            del weight_storage[weight]
+            answer = (idx, pair)
+            print(answer)
+
+            return answer
 
         else:
-            weight_idxs.append(weight_storage[weight])
+            weight_storage[weights[idx]] = idx
 
-    print(weight_idxs)
-    print(sorted(weight_idxs, reverse=True))
     # for w in weight_idxs:
 
     # complements = weight_storage.values()
     # # return sorted(weight_idxs, reverse=True)
     # print(complements)
     # print(sorted(complements))
-
-    return sorted(weight_idxs, reverse=True)
 
     # print(weight_idxs)
 
