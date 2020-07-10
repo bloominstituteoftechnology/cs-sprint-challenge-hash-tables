@@ -1,10 +1,17 @@
 def intersection(arrays):
     """
-    YOUR CODE HERE
+    Time complexity O(n) where n is the total count of numbers in all lists
     """
-    # Your code here
-
-    return result
+    if len(arrays) == 0:
+        return []
+    counts = {}
+    for nums in arrays:
+        for num in nums:
+            if num in counts:
+                counts[num] += 1
+            else:
+                counts[num] = 1
+    return [num for (num, count) in counts.items() if count == len(arrays)]
 
 
 if __name__ == "__main__":
