@@ -1,8 +1,19 @@
 def intersection(arrays):
     """
-    YOUR CODE HERE
+    And we need to compute the _intersection_, that is, numbers that exist
+    in all lists. Output can be in any order.
     """
-    # Your code here
+    
+    result = []
+    cache = {}
+    for arr in arrays:
+        for x in arr:
+            if x in cache:
+                cache[x] += 1
+                if cache[x] == len(arrays):
+                    result.append(x)
+            else:
+                cache[x] = 1
 
     return result
 

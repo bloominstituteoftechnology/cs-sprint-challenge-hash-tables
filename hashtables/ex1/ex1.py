@@ -6,17 +6,6 @@ def get_indices_of_item_weights(weights, length, limit):
     """
     cache = {}
 
-    # for index, val in enumerate(weights):
-    #     if val in cache:
-    #         if cache[val] in cache:
-    #             print(cache[val])
-
-    #     else:
-    #         cache[val] = val - limit
-    #         if cache[val] in cache:
-    #             print(cache[val])
-    #             #return []
-
     for index, val in enumerate(weights):
         cache[limit-val] = index
 
