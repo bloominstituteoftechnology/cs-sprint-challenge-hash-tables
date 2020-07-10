@@ -35,12 +35,12 @@ We expect you to be able to answer questions in these areas. Your responses cont
 
 ### Task 1: Project Set-Up
 
-- [ ] Create a forked copy of this project
-- [ ] Add your team lead as a collaborator on Github
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!)
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
-- [ ] Push commits: git push origin `<firstName-lastName>`
+- [X] Create a forked copy of this project
+- [X] Add your team lead as a collaborator on Github
+- [X] Clone your OWN version of the repository (Not Lambda's by mistake!)
+- [X] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [X] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
+- [X] Push commits: git push origin `<firstName-lastName>`
 
 ### Task 2: Project Requirements
 
