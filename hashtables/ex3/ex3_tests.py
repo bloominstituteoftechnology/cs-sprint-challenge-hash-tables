@@ -14,8 +14,7 @@ class TestEx2(unittest.TestCase):
         result = intersection([[1, 2], [1],])
         self.assertTrue(result == [1])
 
-        result = intersection([[1, 2, 3], [1, 4, 5, 3], [1, 6, 7, 3]])
-        result.sort()
+        result = sorted(intersection([[1, 2, 3], [1, 4, 5, 3], [1, 6, 7, 3]]))
         self.assertTrue(result == [1, 3])
 
     def test_large(self):
@@ -32,8 +31,7 @@ class TestEx2(unittest.TestCase):
             list(range(10000000, 11000000)) + [1, 2, 3],
         ]
 
-        result = intersection(arrays)
-        result.sort()
+        result = sorted(intersection(arrays))
         self.assertTrue(result == [1, 2, 3])
 
 

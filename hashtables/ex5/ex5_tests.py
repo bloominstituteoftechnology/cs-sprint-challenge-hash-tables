@@ -30,8 +30,7 @@ class TestEx2(unittest.TestCase):
 
         queries += ["file3490", "file256", "file999999", "file8192"]
 
-        result = finder(files, queries)
-        result.sort()
+        result = sorted(finder(files, queries))
 
         self.assertTrue(
             result

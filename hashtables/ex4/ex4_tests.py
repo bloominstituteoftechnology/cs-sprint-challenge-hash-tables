@@ -11,16 +11,14 @@ class TestEx4(unittest.TestCase):
         result = has_negatives([1, 2, 3, -4])
         self.assertTrue(result == [])
 
-        result = has_negatives([-1, -2, 1, 2, 3, 4, -4])
-        result.sort()
+        result = sorted(has_negatives([-1, -2, 1, 2, 3, 4, -4]))
         self.assertTrue(result == [1, 2, 4])
 
     def test_large(self):
         a = list(range(5000000))
         a += [-1, -2, -3]
 
-        result = has_negatives(a)
-        result.sort()
+        result = sorted(has_negatives(a))
         self.assertTrue(result == [1, 2, 3])
 
 
