@@ -8,13 +8,17 @@ def intersection(arrays):
 
     for a in arrays:        
         for num in a:
+            # storage[num] = 1
             if num in storage:
-                storage[0] += 1
+                storage[num] += 1
             else:
-                storage[0] = 1
+                storage[num] = 1
 
             for num in storage:                
-                result = [num for num in storage]
+                result = [num for num in storage if num in storage]
+
+            # for num in storage:
+            #     result.append(num)
 
     return result
 

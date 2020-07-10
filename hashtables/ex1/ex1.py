@@ -5,14 +5,12 @@ def get_indices_of_item_weights(weights, length, limit):
     # Your code here
     storage = dict()
 
-    for i in range(length):
-        # print(weights[i], 'test')
-        # weight = weights[i]
-        # print(weight)
+    for i in range(length):        
         if weights[i] in storage:
-            first_index = storage[weights[i]]
-            # print(first_index)
-            return (i, first_index)
+            found_index = storage[weights[i]]
+            
+            # print(i, found_index)
+            return (i, found_index)
 
         storage[limit - weights[i]] = i
         # print(storage)
