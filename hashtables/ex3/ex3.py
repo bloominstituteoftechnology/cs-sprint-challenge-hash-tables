@@ -5,6 +5,7 @@ def intersection(arrays):
     # Your code here
 
     return result
+    
 
 
 if __name__ == "__main__":
