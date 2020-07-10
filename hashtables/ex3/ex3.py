@@ -14,11 +14,11 @@ def intersection(arrays):
             else:
                 storage[num] = 1
 
-            for num in storage:                
-                result = [num for num in storage if num in storage]
+            # for num in storage:                
+                # result = [num for num in storage if num in storage]
 
-            # for num in storage:
-            #     result.append(num)
+            for num in storage:
+                result.append(num)
 
     return result
 
@@ -37,3 +37,6 @@ if __name__ == "__main__":
     #     for value in a:
     #         result = [value for value in a if value in a] 
     # return result 
+
+for k, v in storage.items():
+    
