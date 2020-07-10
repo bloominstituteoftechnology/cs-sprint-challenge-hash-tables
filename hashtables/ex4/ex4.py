@@ -17,23 +17,21 @@ def has_negatives(numbers):
     num_dict = {}
     result = []
 
-    for idx, num in enumerate(numbers):
-        num_dict[idx] = num
-        # print(num_dict)
-        values = num_dict.values()
-        # for num in numbers:
-        print(values)
-        if num > 0:
-            print(num, "num")
-            neg = numpy.negative(num)
-            print(neg, "neg")
+    for num in numbers:
 
-            if neg in values:
-                print(num, "neg in num_dict")
-                # result.append(num)
+        # absol_num = abs(num)
 
-        # print(result)
-        # return result
+        # num_dict[absol_num] = num
+
+        if num_dict.get(abs(num)):
+
+            if (num_dict.get(abs(num)) + num) == 0:
+                result.append(abs(num))
+        else:
+            num_dict[abs(num)] = num
+
+    print(result)
+    return result
 
 
 has_negatives(nums)

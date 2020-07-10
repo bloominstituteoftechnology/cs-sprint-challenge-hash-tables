@@ -22,12 +22,7 @@ def build_weights_table(weights):
 
 
 def get_indices_of_item_weights(weights, length, limit):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
 
-    # create a weight_storage
     build_weights_table(weights)
 
     if length == 1:
