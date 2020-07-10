@@ -10,9 +10,9 @@ def get_indices_of_item_weights(weights, length, limit):
         # weight = weights[i]
         # print(weight)
         if weights[i] in storage:
-            previous_weight_index = storage[weights[i]]
-            print(previous_weight_index)
-            return (i, previous_weight_index)
+            first_index = storage[weights[i]]
+            # print(first_index)
+            return (i, first_index)
 
         storage[limit - weights[i]] = i
         # print(storage)
