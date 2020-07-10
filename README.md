@@ -23,8 +23,17 @@ Commit your code regularly and meaningfully. This practice helps both you (in ca
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your answers beforehand.
 
 1. Hashing functions
+
+Hashing function is a function that can map data to values.  converts data to numbers to create a kay, and store data.
+
 2. Collision resolution
+
+collision resolution is when data needs to use the same byte of memory, so enstead of overwriting the data (loss of data), you can create a Linked List or a Binary Tree at that memory location.
+
 3. Performance of basic hash table operations
+
+
+
 4. Load factor
 5. Automatic resizing
 6. Various use cases for hash tables
