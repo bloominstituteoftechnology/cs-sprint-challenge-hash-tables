@@ -6,17 +6,17 @@ class LinkedList:
 
 
 class HashTable:
-    def __init__(self, capacity):
-        self.size = capacity
-        self.storage = [None] * capacity
+    def __init__(self):
+        self.size = 5000000
+        self.storage = [None] * self.size
 
 
-def hash(string, max):
+def hash(x, max):
     x = ((x >> 16) ^ x) * 0x45d9f3b
     x = ((x >> 16) ^ x) * 0x45d9f3b
     x = ((x >> 16) ^ x)
 
-   return x % max
+    return x % max
 
 def delete(hash_table, key):
     node = hash(key, len(hash_table.storage))
@@ -84,8 +84,41 @@ def has_negatives(a):
     YOUR CODE HERE
     """
     # Your code here
+    # hash_table = HashTable()
+    # # a list to store the results
+    # result = []
+    # number_exists = False
 
-    return result
+    # for i in a:
+    #     # add all numbers to the hash table
+    #     # if a[i] > 0:
+    #     add(hash_table, i, a[i])
+        
+    #     # traverse the array
+    # for i in range(0, len(a)):
+    # #     # Check if the positive value of current  
+    # #     # element exists in the set or not  
+    #     if a[i] < 0:
+    #         if (-a[i]) in hash_table:
+    #             # print the pair
+    #             print("{}, {}".format(a[i], -a[i]))
+    #             result.append(a[i], -a[i])
+    #             number_exists = True
+
+    # if pair_exists == False: 
+    #     print("No such pair exists") 
+
+    obj = {}
+    result = []
+
+    for num in a:
+        if num < 0:
+            obj[num] = -num
+    for num in a:
+        if num > 0 and -num in obj:
+            result.append(num)
+
+    return result # an array
 
 
 if __name__ == "__main__":
