@@ -5,7 +5,6 @@ def intersection(arrays):
     list_count = len(list_of_lists) # how many lists
 
     # an element has to show up in every list to be included in response
-
     tally = {}
 
     # start with first list
@@ -19,7 +18,6 @@ def intersection(arrays):
         # tally occurences
         for new_element in next_list:
         
-
             # no point in tallying if it has not appeared yet
             if new_element in tally:
                 tally[new_element] += 1
