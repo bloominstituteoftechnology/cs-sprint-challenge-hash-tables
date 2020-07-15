@@ -17,6 +17,7 @@ def has_negatives(a):
     #         retval.append(p)
 
 
+
     ht = {}
     for n in numbers:
         if n > 0:
