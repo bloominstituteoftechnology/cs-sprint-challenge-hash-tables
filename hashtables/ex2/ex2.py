@@ -19,7 +19,7 @@ def reconstruct_trip(tickets, length):
     for i in range(length):
         # Add the source and the destination to the hash
         hash_table[tickets[i].source] = tickets[i].destination
-        
+
         # Store the next destination in the route and change the current target
         if tickets[i].source == current_target:
             current_target = tickets[i].destination
@@ -37,6 +37,5 @@ def reconstruct_trip(tickets, length):
                 if current_target == 'NONE':
                     break
                 current_index += 1
-
 
     return route
