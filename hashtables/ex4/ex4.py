@@ -7,10 +7,14 @@ def has_negatives(a):
     numbers = {}
 
     for number in a:
+        # Get absolute number
         abs_number = abs(number)
+        # Check if number already in dict or not
         if abs_number not in numbers:
-            numbers[abs_number] == number
+            # Save new number in dict
+            numbers[abs_number] = number
         else:
+            # Add number to result
             result.append(abs_number)
 
     return result
