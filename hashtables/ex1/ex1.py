@@ -1,6 +1,11 @@
 def get_indices_of_item_weights(weights, length, limit):
 	"""
 	YOUR CODE HERE
+	# Loop through the lendth
+	# Then loop through each of the weights
+	# Make sure your not adding the same index with itself
+	# if the 2 weights equal the limit,
+	# check to see which index is greater than each other and return it
 	"""
 	# Your code here
 	for i in range(0, length):
