@@ -7,7 +7,7 @@ def get_indices_of_item_weights(weights, length, limit):
     limits = {}
     start_index = None
     pair = None
-    for i in range(len(weights)):
+    for i in range(length):
         # Handle collisions
         if weights[i] in limits:
             limits[weights[i]].append(i)
