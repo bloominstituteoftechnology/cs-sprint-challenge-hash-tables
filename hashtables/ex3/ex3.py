@@ -9,12 +9,12 @@ def intersection(arrays):
     length = len(arrays)
     for array in arrays:
         for number in array:
-            if number in number_counts:
+            if number not in number_counts:
+                number_counts[number] = 1
+            else:
                 number_counts[number] += 1
                 if number_counts[number] == length:
                     result.append(number)
-            else:
-                number_counts[number] = 1
     '''for number in arrays[0]:
         count = 1
         for i in range(1, length):
