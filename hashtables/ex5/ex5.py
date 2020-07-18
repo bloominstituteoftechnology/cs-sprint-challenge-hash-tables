@@ -6,7 +6,17 @@ def finder(files, queries):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    # We can use the built in string method to separate filenames from paths
+    filenames = {}
+    for name in files:
+        filenames[name] = name.rsplit('/',1)[-1]
+    
+    # Instantiate result:
+    result = []
+
+    # Check queries agains filenames
+    for q in queries:
+       result = result + [k for k,v in filenames.items() if v == q]
 
     return result
 

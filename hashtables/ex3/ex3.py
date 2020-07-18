@@ -2,7 +2,24 @@ def intersection(arrays):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    # Instantiate a cache dict 'occurences'
+    occurrences = dict()
+
+    for i in range(len(arrays)):
+        for num in arrays[i]:
+            if num not in occurrences:
+                occurrences[num] = 1
+            
+            else:
+                occurrences[num] +=1
+    
+    # Instantiate result
+    result = []
+
+    # If the number has occurred in every list in arrays then
+    # we add it to result
+    l = len(arrays)
+    result = result + [k for k,v in occurrences.items() if v == l]
 
     return result
 
