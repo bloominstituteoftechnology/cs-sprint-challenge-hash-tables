@@ -4,12 +4,16 @@ def intersection(arrays):
     """
     # Instantiate a cache dict 'occurences'
     occurrences = dict()
-
+    
+    # Loop over every list in arrays
     for i in range(len(arrays)):
+        # Loop ober each number
         for num in arrays[i]:
+            # Check to see if num has 'occurred' yet
             if num not in occurrences:
                 occurrences[num] = 1
             
+            # If it has then add an occurrence
             else:
                 occurrences[num] +=1
     
