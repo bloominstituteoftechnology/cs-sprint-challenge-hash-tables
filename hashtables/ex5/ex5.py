@@ -1,12 +1,22 @@
-# Your code here
-
-
-
 def finder(files, queries):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    
+    dic = {}
+    result = []
+
+    for f in files:
+        f_name = f.rsplit('/', 1)[1] 
+
+        if f_name not in dic:
+            dic[f_name] = []
+        
+        dic[f_name].append(f)
+
+    for q in queries:
+        if q in dic:
+            result += dic[q]
 
     return result
 
