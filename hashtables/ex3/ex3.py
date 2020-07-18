@@ -1,9 +1,21 @@
 def intersection(arrays):
     """
     YOUR CODE HERE
+    # Loop through each of the arrays
+    # Loop through each of the numbers in each array
+    # Store each intersection into our cache
+    # Return the keys that exist in each of the arrays
     """
     # Your code here
+    cache = {}
+    for arr in arrays:
+        for num in arr:
+            if num not in cache:
+                cache[num] = 1
+            else:
+                cache[num] += 1
 
+    result = [k for k, v in cache.items() if v == len(arrays)]
     return result
 
 
