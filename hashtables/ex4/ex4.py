@@ -1,9 +1,19 @@
 def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
-
+    # create a dict 
+    store = {}
+    # create a list to store the values
+    result = []
+    #iterate over a
+    for val in a:
+        #if the value is not 0
+        if val != 0:
+            # the value stored is 1
+            store[val] = 1
+            #if there are negative values in the store
+            if -val in store:
+                #append the absolute value to the result
+                result.append(abs(val))
+    #return the result
     return result
 
 
