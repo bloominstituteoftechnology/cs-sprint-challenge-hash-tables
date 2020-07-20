@@ -1,10 +1,20 @@
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    # Create a cache
+    cache = {}
 
-    return result
+    # Traverse the arr of arrays
+    for arr in arrays:
+        # Traverse the arr
+        for val in arr:
+            # If val in cache inc count val
+            if val in cache:
+                cache[val] += 1
+            # Otherwise, add it to the cache
+            else:
+                cache[val] = 1
+    # Return a list of all arr items(keys in the cache) with a value equal to the number of arrays
+    # in the original input arr
+    return [key for key in cache.keys() if cache[key] == len(arrays)]
 
 
 if __name__ == "__main__":
