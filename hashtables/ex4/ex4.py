@@ -3,15 +3,14 @@ def has_negatives(a):
     YOUR CODE HERE
     """
     # Your code here
-    storage = {}
-    result = []
+    storage = {} # create an empty dictionary
+    result = [] # instantiate list for numbers that meet the criteria
 
-    for number in a:
-        storage[number] = 1  # adds numbers to storage
-        if (-1*number) in storage: # looks for opposites of the numbers in storage
+    for number in a:   
+        if (-number) in storage: # looks for opposites of the numbers in storage
             result.append(abs(number)) # appends the absolute value of the number into storage
-
-
+        else:
+            storage[number] = 1  
     return result
 
 
