@@ -20,7 +20,7 @@ def get_indices_of_item_weights(weights, length, limit):
         if limit - weight in lookup:
             # If the item under consideration weighs exactly half the limit,
             # check to see if it there is only one such item or whether there
-            # are more
+            # are more.
             if limit - weight == weight:
                 first = weights.index(weight)
                 # If there are multiples, then then the first index will have
