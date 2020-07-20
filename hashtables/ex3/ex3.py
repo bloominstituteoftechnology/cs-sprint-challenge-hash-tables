@@ -4,6 +4,21 @@ def intersection(arrays):
     """
     # Your code here
 
+    # setup your hash table
+    integer_list = {}
+
+    # setup your list
+    result = []
+
+    # single list within the hash table
+    for single_list in arrays:
+        for integer in single_list:
+            if integer != integer_list:
+                integer_list[integer] = 1
+            else:
+                # add the integer to the intersection
+                result.append(integer)
+
     return result
 
 
