@@ -16,6 +16,11 @@ class TestEx1(unittest.TestCase):
         self.assertTrue(answer_2[0] == 1)
         self.assertTrue(answer_2[1] == 0)
 
+    def test_ex1_2point5(self):
+        weights_2point5 = [4, 5]
+        answer_2point5 = get_indices_of_item_weights(weights_2point5, 2, 8)
+        self.assertTrue(answer_2point5 is None)
+
     def test_ex1_3(self):
         weights_3 = [4, 6, 10, 15, 16]
         answer_3 = get_indices_of_item_weights(weights_3, 5, 21)
@@ -27,6 +32,12 @@ class TestEx1(unittest.TestCase):
         answer_4 = get_indices_of_item_weights(weights_4, 9, 7)
         self.assertTrue(answer_4[0] == 6)
         self.assertTrue(answer_4[1] == 2)
+
+    def test_ex1_5(self):
+        weights_5 = [0, 1, 8, 9]
+        answer_5 = get_indices_of_item_weights(weights_5, 4, 9)
+        self.assertTrue(answer_5[0] == 3)
+        self.assertTrue(answer_5[1] == 0)
 
 
 if __name__ == '__main__':
