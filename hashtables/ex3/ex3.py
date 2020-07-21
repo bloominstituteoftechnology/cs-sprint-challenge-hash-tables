@@ -4,6 +4,22 @@ def intersection(arrays):
     """
     # Your code here
 
+    arrays_count = len(arrays) 
+    storage = {}
+    result= []
+
+    for numbers in arrays:
+        for number in numbers:
+            if number in storage:
+                storage[number] += 1
+            else:
+                storage[number] = 1
+      
+    for key in storage:
+        if storage[key]==arrays_count:
+            result.append(key)
+        
+
     return result
 
 
