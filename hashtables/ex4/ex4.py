@@ -3,6 +3,10 @@ def has_negatives(a):
     YOUR CODE HERE
     """
     # Your code here
+    # create a hash table
+    integer = {}
+    # list holder created
+    result = []
 
     return result
 
