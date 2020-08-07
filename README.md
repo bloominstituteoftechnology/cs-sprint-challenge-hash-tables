@@ -22,12 +22,12 @@ Commit your code regularly and meaningfully. This practice helps both you (in ca
 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your answers beforehand.
 
-1. Hashing functions
-2. Collision resolution
-3. Performance of basic hash table operations
-4. Load factor
-5. Automatic resizing
-6. Various use cases for hash tables
+1. Hashing functions - Functions that map values to a number(index)
+2. Collision resolution - Most hashing functions will have collisions, this is when 2 values are mapped to the same index. To resolve this, the values are mappd to the same index form a linked list.
+3. Performance of basic hash table operations - O(1) Very fast
+4. Load factor - The ideal load factor is between 0.2 - 0.7. This means if your hash table starts with 8 spaces, once it is 70% full it should double in size to better improve performance. Likewise, if less than 20% full you should shrink your table to improve performance. 
+5. Automatic resizing - Load factor is doubled or divided for optimal performance. See above answer. 
+6. Various use cases for hash tables - Anytime you need to be able to map values to keys, be able to look up things quickly, 
 
 We expect you to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -35,10 +35,10 @@ We expect you to be able to answer questions in these areas. Your responses cont
 
 ### Task 1: Project Set-Up
 
-- [ ] Create a forked copy of this project
-- [ ] Add your team lead as a collaborator on Github
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!)
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [ x] Create a forked copy of this project
+- [x ] Add your team lead as a collaborator on Github
+- [ x] Clone your OWN version of the repository (Not Lambda's by mistake!)
+- [ x] Create a new branch: git checkout -b `<firstName-lastName>`.
 - [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
 - [ ] Push commits: git push origin `<firstName-lastName>`
 
