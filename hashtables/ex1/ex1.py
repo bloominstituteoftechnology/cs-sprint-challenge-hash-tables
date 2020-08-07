@@ -13,7 +13,7 @@ def get_indices_of_item_weights(weights, length, limit):
     
     for i in range(length):
         checking_weight = weights[i]
-        cache[checking_weight] = i
+        cache[checking_weight] = i #add to hashtable
 
         match_weight = limit - checking_weight
         if match_weight in cache:

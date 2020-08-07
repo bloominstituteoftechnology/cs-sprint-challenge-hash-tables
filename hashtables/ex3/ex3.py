@@ -5,12 +5,12 @@ def intersection(arrays):
     # Your code here
     cache = {}
 
-    total_array_list = len(arrays)
+    total_array_list = len(arrays) 
 
     for list in arrays:
         for element in list:
             if element in cache:
-                cache[element] += 1
+                cache[element] += 1 #counter for repeating element in all list
             else:
                 cache[element] = 1
     

@@ -8,7 +8,7 @@ def has_negatives(a):
 
     for checking_number in a:
         if checking_number != 0:
-            cache[checking_number] = 1
+            cache[checking_number] = 1  #add to hashtable
             if -checking_number in cache:
                 result.append(abs(checking_number))
 
