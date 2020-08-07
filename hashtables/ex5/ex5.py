@@ -3,10 +3,12 @@
 
 
 def finder(files, queries):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    result = []
+    cache = {}
+
+    for file in files:
+        print(file)
+
 
     return result
 

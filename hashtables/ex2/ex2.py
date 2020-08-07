@@ -16,6 +16,7 @@ def reconstruct_trip(tickets, length):
 	for x in range(length):
 		route[x] = destination
 		destination = cache[destination]
+		print(route)
 
 	return route
 
