@@ -12,7 +12,7 @@ def intersection(arrays):
             else:
                 catalog[num] = 1
 
-    # stash any key that has a value greater than 2 in the result arr
+    # stash any key that has a value greater than 1 in the result arr
     for key, val in catalog.items():
         if val > 1:
             result.append(key)
