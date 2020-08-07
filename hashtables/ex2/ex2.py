@@ -9,8 +9,6 @@ def reconstruct_trip(tickets, length):
     route = [None] * length
     # start points
     s = {}
-    # end points
-    e = {}
     for i in range(length):
         s[tickets[i].source] = tickets[i].destination
     route[0] = s["NONE"]
