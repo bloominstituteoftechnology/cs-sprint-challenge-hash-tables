@@ -9,7 +9,7 @@ def intersection(arrays):
         dict_list.append(dicto)
     cands = arrays[0].copy()
     result = arrays[0].copy()
-    for s in dict_list[1:]:
+    for s in dict_list:
         for i in cands:
             if i not in s:
                 result.remove(i)
@@ -18,24 +18,24 @@ def intersection(arrays):
     return result
 
 
-arroz = [
-            [1,2],
-            [1],
-]
-print(intersection(arroz))
+# arroz = [
+#             [1,2],
+#             [1],
+# ]
+# print(intersection(arroz))
 
 
-# start = time.time()
+start = time.time()
 
-# if __name__ == "__main__":
-#     arrays = []
+if __name__ == "__main__":
+    arrays = []
 
-#     arrays.append(list(range(100000, 200000)) + [1, 2, 3])
-#     arrays.append(list(range(200000, 300000)) + [1, 2, 3])
-#     arrays.append(list(range(300000, 400000)) + [1, 2, 3])
+    arrays.append(list(range(100000, 200000)) + [1, 2, 3])
+    arrays.append(list(range(200000, 300000)) + [1, 2, 3])
+    arrays.append(list(range(300000, 400000)) + [1, 2, 3])
 
-#     print(intersection(arrays))
-#     print(f'{time.time()-start} seconds')
+    print(intersection(arrays))
+    print(f'{time.time()-start} seconds')
 
 
 
