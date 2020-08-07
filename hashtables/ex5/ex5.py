@@ -1,14 +1,22 @@
-# Your code here
-
-
-
 def finder(files, queries):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
 
-    return result
+    file_dict = dict()
+
+    for path in files:
+        name = path.rpartition('/')[-1]
+        if name not in file_dict:
+            file_dict[name] = [path]
+        else:
+            file_dict[name].append(path)
+
+    results = list()
+
+    for query in queries:
+        if query in file_dict:
+            for path in file_dict[query]:
+                results.append(path)
+
+    return results
 
 
 if __name__ == "__main__":

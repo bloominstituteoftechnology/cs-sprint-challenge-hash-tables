@@ -1,10 +1,20 @@
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
 
-    return result
+    counts = dict()
+
+    for arr in arrays:
+        for num in arr:
+            if num not in counts:
+                counts[num] = 0
+            counts[num] += 1
+    
+    results = list()
+
+    for k, v in counts.items():
+        if v == len(arrays):
+            results.append(k)
+
+    return results
 
 
 if __name__ == "__main__":
