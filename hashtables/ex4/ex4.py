@@ -2,9 +2,12 @@ def has_negatives(a):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    # result = {abs(x): -x for x in a if -x in a}
+    pos = {x: 0 for x in a if x > 0}
+    neg = {abs(x): 0 for x in a if x < 0}
+    result = dict(pos.items() & neg.items())
 
-    return result
+    return list(result.keys())
 
 
 if __name__ == "__main__":
