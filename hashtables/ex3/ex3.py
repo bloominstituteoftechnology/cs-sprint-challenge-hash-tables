@@ -1,10 +1,16 @@
-def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
 
-    return result
+def intersection(arr):
+    #loop through lists and compare
+    #multi = []
+    p1 = 1
+    same = set(arr[0])
+    while p1 <= len(arr)-1:
+        same = same & set(arr[p1])
+        p1 += 1
+        
+    return list(same)
+
+    
 
 
 if __name__ == "__main__":

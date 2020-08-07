@@ -22,6 +22,7 @@ class TestEx4(unittest.TestCase):
 
         result = has_negatives(a)
         result.sort()
+       
         self.assertTrue(result == [1,2,3])
 
 if __name__ == '__main__':
