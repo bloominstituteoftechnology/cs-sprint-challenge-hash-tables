@@ -6,23 +6,15 @@ class Ticket:
         self.destination = destination
 
 
-# this problem screams linked list to me
-
-# here is my plan of attack,
-# make a linked list using the ticket nodes that are provided
-# iterate through the chain and sort it so that the next source is the previous
-# nodes dest
-# format the output once the list os sorted
-# in total I'm going to be going for n^2 runtime complexity and try working it
-# down from there after i have an MVP
-
-
 def reconstruct_trip(tickets, length):
-    sources = [x.source for x in tickets]
-    destinations = [x.destination for x in tickets]
+    des = {}
+    # make a ht with the dest as the keys and the values as the source
+    tups = []
+    for i in tickets:
+        tups += [(i.source, i.destination)]
+    print(tups)
 
-    route = []
-    return route
+    return None
 
 
 if __name__ == '__main__':
