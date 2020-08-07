@@ -19,8 +19,15 @@ Your solution should run in linear time.
 
 Example:
 ```
-input: weights = [ 4, 6, 10, 15, 16 ], length = 5, limit = 21
-output: [ 3, 1 ]  # since these are the indices of weights 15 and 6 whose sum equals 21
+input: 
+	weights = [ 4, 6, 10, 15, 16 ], 
+	length = 5, 
+	limit = 21
+
+output: [ 3, 1 ]  
+
+# since these are the indices of 
+weights 15 and 6 whose sum equals 21
 ```
 
 ## Hints
