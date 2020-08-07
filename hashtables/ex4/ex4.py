@@ -1,10 +1,21 @@
-def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+class HashEntry:
+    def __init__(self, value, neg):
+        self.value = value
+        self.neg = neg
 
-    return result
+
+def has_negatives(a):
+    d = {}
+    res = []
+    for x in a:
+        val = abs(x)
+        neg = False if x >= 0 else True
+        if val in d:
+            if (d[val].neg and not neg) or (not d[val].neg and neg):
+                res.append(val)
+        else:
+            d[val] = HashEntry(val, neg)
+    return res
 
 
 if __name__ == "__main__":
