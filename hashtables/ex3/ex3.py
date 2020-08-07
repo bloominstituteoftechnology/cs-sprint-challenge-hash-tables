@@ -1,8 +1,24 @@
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    count = {}
+    
+    for arr in arrays:
+        # separate hash table to keep track of numbers seen in each array,
+        # to avoid counting multiple occurrences of same number
+        seen = {}
+        for num in arr:
+            if num in seen:
+                continue
+            elif num in count:
+                count[num] += 1
+            else:
+                count[num] = 1
+            seen[num] = True
+    
+    result = []
+    for num in count:
+        if count[num] == len(arrays):
+            result.append(num)
+
 
     return result
 
