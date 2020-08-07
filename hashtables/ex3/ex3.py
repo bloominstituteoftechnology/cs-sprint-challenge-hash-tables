@@ -1,10 +1,19 @@
+
+cache = {}
+
 def intersection(arrays):
     """
     YOUR CODE HERE
     """
     # Your code here
-
-    return result
+    for arr in arrays:
+        for num in arr:
+            if num not in cache:
+                cache[num] = 0
+            cache[num] += 1
+    
+    result = [key for key, val in cache.items() if val == len(arrays)]
+    return sorted(result)
 
 
 if __name__ == "__main__":
