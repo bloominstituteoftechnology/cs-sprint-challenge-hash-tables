@@ -1,8 +1,21 @@
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+
+    # build hashtable and result arr
+    catalog = {}
+    result = []
+
+    # loop to get each value from each inner array (needs a nested for loop)
+    for array in arrays:
+        for num in array:
+            if num in catalog:
+                catalog[num] += 1
+            else:
+                catalog[num] = 1
+
+    # stash any key that has a value greater than 2 in the result arr
+    for key, val in catalog.items():
+        if val > 1:
+            result.append(key)
 
     return result
 
