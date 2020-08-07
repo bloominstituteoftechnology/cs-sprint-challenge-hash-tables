@@ -1,8 +1,28 @@
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+  
+    cache = {}
+
+    # number of arrays is number of repeats we're looking for
+    length = len(arrays)
+
+    result = []
+
+    # look at each array.
+    for array in arrays:
+        # go through each number.
+        for num in array:
+            # if number alreay in cache, increase our count.
+            if num in cache:
+                cache[num] += 1
+            # if not add it.
+            else:
+                cache[num] = 1
+    # look through our cache
+    for num in cache.items():
+        # if value is the same as number of arrays or length
+        if num[1] == length:
+            # store it
+            result.append(num[0])
 
     return result
 
