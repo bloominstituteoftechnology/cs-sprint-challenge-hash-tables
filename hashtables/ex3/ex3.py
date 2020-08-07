@@ -2,10 +2,26 @@ def intersection(arrays):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    numbers = dict()
+    count = 0
+
+    for array in arrays:
+        count += 1
+        
+        for num in array:
+            if num in numbers:
+                numbers[num] += 1
+            else:
+                numbers[num] = 1
+
+    result = list()
+    numbers_list = numbers.items()
+
+    for number in numbers_list:
+        if number[1] == count:
+            result.append(number[0])
 
     return result
-
 
 if __name__ == "__main__":
     arrays = []
