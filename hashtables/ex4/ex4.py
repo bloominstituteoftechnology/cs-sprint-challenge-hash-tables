@@ -1,8 +1,15 @@
 def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    ht = {}
+    for num in a:
+        if num > 0:
+            ht[num] = True
+
+    result = []
+    for num in a:
+        if num < 0:
+            num = abs(num)
+            if num in ht:
+                result.append(num)
 
     return result
 
