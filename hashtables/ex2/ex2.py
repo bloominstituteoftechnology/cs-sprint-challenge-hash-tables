@@ -6,9 +6,21 @@ class Ticket:
 
 
 def reconstruct_trip(tickets, length):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    cache = {}
+
+    for a in tickets:
+        cache[a.source] = a.destination
+    
+    route = [cache['NONE']]
+    
+    index = 0
+    current = route[index]
+    while current != 'NONE':
+        route.append(cache[route[index]])
+        
+        index += 1
+        current = cache[route[index]]
+    
+    route.append(cache[route[index]])
 
     return route
