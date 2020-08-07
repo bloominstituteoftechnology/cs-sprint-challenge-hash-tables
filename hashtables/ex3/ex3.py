@@ -3,6 +3,7 @@ def intersection(arrays):
     YOUR CODE HERE
     """
     # Your code here
+    let appeared = {i: }
 
     return result
 
