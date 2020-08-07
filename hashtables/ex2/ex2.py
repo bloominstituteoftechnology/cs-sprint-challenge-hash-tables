@@ -6,6 +6,7 @@ class Ticket:
 
 
 def reconstruct_trip(tixlist, length):
+    flights = {}
     for tick in tixlist:
         flights[tick.source] = tick.destination
     route = []
