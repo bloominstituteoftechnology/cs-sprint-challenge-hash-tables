@@ -1,7 +1,21 @@
 def intersection(arrays):
+    """
+    Params:
+    -----
+    List of arrays to find intersections
+
+    Returns:
+    -----
+    List of items that are found in all lists
+
+    """
 
     counts = dict()
 
+    # iterate over all items in the lists and add
+    # up the count of each item. This is under the 
+    # assumption that a number will not be seen more
+    # than once in the same list (checked tests)
     for arr in arrays:
         for num in arr:
             if num not in counts:
@@ -10,6 +24,9 @@ def intersection(arrays):
     
     results = list()
 
+    # look to see if the value is the same as the
+    # number of lists.. if it is, then it should be 
+    # seen in all of them
     for k, v in counts.items():
         if v == len(arrays):
             results.append(k)
