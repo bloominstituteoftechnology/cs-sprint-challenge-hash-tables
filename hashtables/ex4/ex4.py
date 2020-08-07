@@ -1,8 +1,16 @@
 def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    result=[]
+    cache={}
+
+    for number in a:
+    	cache[number] = 0
+    for number in a:
+    	# Turn negative to positive
+    	temp = number * -1
+    	# If theres a positive version, add to results
+    	if temp in cache and temp < 0:
+    		result.append(number)
+
 
     return result
 
