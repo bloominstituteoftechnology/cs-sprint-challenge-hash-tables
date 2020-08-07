@@ -2,11 +2,11 @@ def intersection(arrays):
     """
     Params:
     -----
-    List of arrays to find intersections
+    arrays: of arrays to find intersections
 
     Returns:
     -----
-    List of items that are found in all lists
+    results: of items that are found in all lists
 
     """
 
