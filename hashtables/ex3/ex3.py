@@ -3,6 +3,15 @@ def intersection(arrays):
     YOUR CODE HERE
     """
     # Your code here
+    # create dict to hold nums that appear in all lists
+    dups_dict = {}
+    # loop over each array in the main arr
+    for i in arrays: 
+    # loop over each item in each inner arr
+        for j in i:
+            if
+    # add all nums in first arr to the dict
+    # check if nums in next arr ar in dict, if not, remove from dict.  repeat until no more lists
 
     return result
 

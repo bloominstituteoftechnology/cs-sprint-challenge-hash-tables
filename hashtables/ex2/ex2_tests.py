@@ -5,17 +5,17 @@ from ex2 import Ticket, reconstruct_trip
 
 class TestEx2(unittest.TestCase):
 
-    def test_short_case(self):
-        ticket_1 = Ticket("NONE", "PDX")
-        ticket_2 = Ticket("PDX", "DCA")
-        ticket_3 = Ticket("DCA", "NONE")
+    # def test_short_case(self):
+    #     ticket_1 = Ticket("NONE", "PDX")
+    #     ticket_2 = Ticket("PDX", "DCA")
+    #     ticket_3 = Ticket("DCA", "NONE")
 
-        tickets = [ticket_1, ticket_2, ticket_3]
+    #     tickets = [ticket_1, ticket_2, ticket_3]
 
-        expected = ["PDX", "DCA", "NONE"]
-        result = reconstruct_trip(tickets, 3)
+    #     expected = ["PDX", "DCA", "NONE"]
+    #     result = reconstruct_trip(tickets, 3)
 
-        self.assertTrue(expected == result)
+    #     self.assertTrue(expected == result)
 
     def test_long_case(self):
         ticket_1 = Ticket("PIT", "ORD")
