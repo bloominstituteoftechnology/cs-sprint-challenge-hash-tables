@@ -9,6 +9,18 @@ def reconstruct_trip(tickets, length):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    my_dict = {}
+    route = []
+
+    # populating hash map
+    for ticket in tickets:
+        my_dict[ticket.source] = ticket.destination
+
+    # Creating route
+    for _ in range(length):
+        if not route:
+            route.append(my_dict['NONE'])
+        else:
+            route.append(my_dict[route[-1]])
 
     return route
