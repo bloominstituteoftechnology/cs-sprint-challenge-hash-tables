@@ -14,6 +14,8 @@ def intersection(arrays):
 
     return result
 
+# couldn't figure out how to use intersection with 1 parameter. Not an optimal solution, but it passes!
+
 
 if __name__ == "__main__":
     arrays = []
