@@ -6,8 +6,7 @@ efficiently using a hash table. You know the drill at this point.
 Navigate into each exercise's directory, read the instructions for the
 exercise laid out in the README, implement your solution in the `.py`
 skeleton file, then make sure your code passes the tests by running the
-test script with `-v`.
-
+test script with `-v` .
 
 ## Hint
 

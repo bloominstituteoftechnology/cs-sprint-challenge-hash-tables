@@ -1,10 +1,12 @@
 def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
-
-    return result
+    d = {}
+    res = []
+    for x in a:
+        if abs(x) in d:
+            res.append(abs(x))
+        else:
+            d[abs(x)] = True
+    return res
 
 
 if __name__ == "__main__":
