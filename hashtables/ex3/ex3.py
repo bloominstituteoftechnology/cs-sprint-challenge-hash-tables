@@ -2,11 +2,23 @@ def intersection(arrays):
     """
     YOUR CODE HERE
     """
+    
     # Your code here
-    let appeared = {i: }
+    result = []
+    datatable = {}
+
+    for array in arrays:
+        for item in array:
+            if item not in datatable:
+                datatable[item] = 1
+            else:
+                datatable[item] += 1
+    
+    for key, value in datatable.items():
+        if value == len(arrays):
+            result.append(key)
 
     return result
-
 
 if __name__ == "__main__":
     arrays = []
