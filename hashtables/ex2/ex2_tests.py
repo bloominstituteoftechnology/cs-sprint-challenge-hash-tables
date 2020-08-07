@@ -15,7 +15,7 @@ class TestEx2(unittest.TestCase):
         expected = ["PDX", "DCA", "NONE"]
         result = reconstruct_trip(tickets, 3)
 
-        self.assertTrue(expected == result)
+        self.assertEqual(expected, result)
 
     def test_long_case(self):
         ticket_1 = Ticket("PIT", "ORD")
@@ -36,7 +36,7 @@ class TestEx2(unittest.TestCase):
                     "SLC", "PIT", "ORD", "NONE"]
         result = reconstruct_trip(tickets, 10)
 
-        self.assertTrue(expected == result)
+        self.assertEqual(expected, result)
 
 
 if __name__ == '__main__':
