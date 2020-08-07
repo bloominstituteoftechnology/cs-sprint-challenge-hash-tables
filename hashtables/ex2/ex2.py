@@ -9,13 +9,13 @@ def reconstruct_trip(tickets, length):
     """
     Params:
     -----
-    tickets = list of jumbled Ticket classes (starting flight has source of "NONE" and 
+    tickets: list of jumbled Ticket classes (starting flight has source of "NONE" and 
     ending flight has destinatiton of "NONE")
-    length = length of ticket lists
+    length: length of ticket lists
 
     Returns:
     -----
-    list of organized flights
+    organized flights: list of organized flights
 
     """
 
