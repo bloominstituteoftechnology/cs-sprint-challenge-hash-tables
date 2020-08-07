@@ -1,4 +1,4 @@
-# Your code here
+
 
 
 
@@ -16,6 +16,7 @@ def finder(files, queries):
     for q in queries:
         result = result + [k for k, v in filenames.items() if v == q]
 
+    
 
     return result
 
