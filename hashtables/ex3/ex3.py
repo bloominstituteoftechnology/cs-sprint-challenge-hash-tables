@@ -3,11 +3,7 @@ def intersection(arrays):
     YOUR CODE HERE
     """
     numbers = dict()
-    count = 0
-
-    for array in arrays:
-        count += 1
-        
+    for array in arrays:        
         for num in array:
             if num in numbers:
                 numbers[num] += 1
@@ -18,7 +14,7 @@ def intersection(arrays):
     numbers_list = numbers.items()
 
     for number in numbers_list:
-        if number[1] == count:
+        if number[1] == len(arrays):
             result.append(number[0])
 
     return result
