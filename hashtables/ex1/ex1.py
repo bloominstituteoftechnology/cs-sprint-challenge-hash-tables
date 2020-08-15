@@ -18,7 +18,7 @@ def get_indices_of_item_weights(weights, length, limit):
     # iterate through to find max & min from complement
     for i in range(length):
         current = weights[i]
-        complement = limit - current
+        complement = limit - current  # could also optimize as >> limit - weights[i]
 
         if complement in index_dict:
             #print(complement)  
@@ -27,8 +27,9 @@ def get_indices_of_item_weights(weights, length, limit):
             result.append(i)
 
     if result:
-        result = sorted(result, reverse = True)
-        return result
+        # result = sorted(result, reverse = True)
+        # return result
+        return sorted(result, reverse = True)
 
     return None   # if nothing found
 
