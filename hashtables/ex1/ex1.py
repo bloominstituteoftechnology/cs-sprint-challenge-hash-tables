@@ -7,7 +7,7 @@ def get_indices_of_item_weights(weights, length, limit):
     data = {}
     # loop through weights
     for i in range(len(weights)):
-        # grabb inicies
+        # grab inicies
         data[weights[i]] = i
     for i in range(len(weights)):
         dif = limit-weights[i]
