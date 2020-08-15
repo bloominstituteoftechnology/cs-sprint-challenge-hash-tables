@@ -1,11 +1,11 @@
 def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
-
-    return result
-
-
-if __name__ == "__main__":
-    print(has_negatives([-1, -2, 1, 2, 3, 4, -4]))
+    int_d = {}
+    output = []
+    for i in range(len(a)):
+        int_d[a[i]] = i
+    for x, y in int_d.items():
+        if x > 0:
+            e = -x
+            if e in int_d:
+                output.append(x)
+    return output

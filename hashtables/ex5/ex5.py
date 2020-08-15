@@ -1,13 +1,15 @@
 # Your code here
 
 
-
 def finder(files, queries):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
-
+    q_d = {}
+    result = []
+    for i in queries:
+        q_d[i] = 0
+    for i in files:
+        a = i.split('/')
+        if a[len(a)-1] in q_d:
+            result.append(i)
     return result
 
 
