@@ -30,6 +30,7 @@ def intersection(arrays):
     return result
 
 ####  REMOVE print statements B4 running tests !!!!!!!!!!!!!
+# MVP !!!! ###
 
 if __name__ == "__main__":
     arrays = []
