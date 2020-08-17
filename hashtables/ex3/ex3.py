@@ -23,9 +23,9 @@ def intersection(arrays):
         for num in a:
             if num not in table:
                 table[num] = None
-
-            if num not in result:
-                result.append(num)
+                
+            elif num not in result:
+                    result.append(num)
 
     return result
 
