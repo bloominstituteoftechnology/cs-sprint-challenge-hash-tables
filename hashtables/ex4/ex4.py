@@ -19,8 +19,9 @@ def has_negatives(a):
     for num in a:
         if num < 0:
             num * -1
+            print(num)
 
-    return result
+    # return result
 
 
 if __name__ == "__main__":
