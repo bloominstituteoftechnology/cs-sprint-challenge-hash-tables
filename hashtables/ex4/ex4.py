@@ -22,14 +22,25 @@ def has_negatives(a):
     table = {}
 
     for num in a:
-        if num < 0:
-            #change num to pos
-            num = num * -1
-            # print(num)
+        if num > 0:
             if num not in table:
-                table[num] = 0
-                if num not in result:
-                    result.append(num)
+                table[num] = True
+                
+    for num in a:
+        if num < 0:
+            num = num * -1
+            if num in table:
+                result.append(num)
+
+    # for num in a:
+    #     if num < 0:
+    #         #change num to pos
+    #         num = num * -1
+    #         # print(num)
+    #         if num not in table:
+    #             table[num] = 0
+    #             if num not in result:
+    #                 result.append(num)
     print(result)
     return result
 
