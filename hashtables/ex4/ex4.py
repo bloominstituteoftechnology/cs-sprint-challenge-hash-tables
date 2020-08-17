@@ -10,6 +10,11 @@ def has_negatives(a):
     look for positive nums 
     store in results
 
+    loop through all nums find positive
+    store positives in table
+    then look for negs and convert to pos
+    see if that key is in table if it is then append to result
+
 
     """
     # Your code here
@@ -18,11 +23,16 @@ def has_negatives(a):
 
     for num in a:
         if num < 0:
-            num * -1
-            print(num)
-
-    # return result
+            #change num to pos
+            num = num * -1
+            # print(num)
+            if num not in table:
+                table[num] = 0
+                if num not in result:
+                    result.append(num)
+    print(result)
+    return result
 
 
 if __name__ == "__main__":
-    print(has_negatives([-1, -2, 1, 2, 3, 4, -4]))
+    print(has_negatives([-1, -2, 2, 1, 3, 4, -4]))
