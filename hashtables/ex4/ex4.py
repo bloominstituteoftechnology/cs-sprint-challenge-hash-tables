@@ -6,6 +6,9 @@ def has_negatives(a):
     Result is an array
 
     loop through array 
+    make negative numbers pos###### multiply neg num by neg num 
+    look for positive nums 
+    store in results
 
 
     """
@@ -14,7 +17,8 @@ def has_negatives(a):
     table = {}
 
     for num in a:
-        
+        if num < 0:
+            num * -1
 
     return result
 
