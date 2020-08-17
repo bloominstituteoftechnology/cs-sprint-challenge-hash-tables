@@ -17,14 +17,19 @@ def get_indices_of_item_weights(weights, length, limit):
     """
     # Your code here
     table = {}
-    diff = limit - weight
-    
-    for w in range(length):
-        
 
 
+    for i in range(length):
+        # print(w)
+        diff = limit - weights[i]
 
+        if diff not in table:
+            table[weights[i]] = i
+        else:
+            diff_weight = table[diff]
+            total_limit = (i, diff_weight)
+            return total_limit
 
-    # return None
+    return None
 
-# print(get_indices_of_item_weights([4,6,10,15,16], 5, 21))
+print(get_indices_of_item_weights([4,6,10,15,16], 5, 21))
