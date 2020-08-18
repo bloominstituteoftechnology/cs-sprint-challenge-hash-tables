@@ -30,10 +30,13 @@ def finder(files, queries):
     for query in query_cache:
         if query in file_cache:
             # print(f' CACHE HIT on query {query} ')
-            # result.append(file_cache[query]) # NOPE add list inside of list (e.g. obj <-> list gets appended)
+            # result.append(file_cache[query]) # NOPE add list inside of list (e.g. obj <-> [list] gets appended)
             # print(f' result {result}')
             result.extend(file_cache[query])   # adds directly to list as args in list iterated 
 
+            # result += file_cache[query]  # slightly faster than  extend 
+
+    print(result)
     return result
 
 
