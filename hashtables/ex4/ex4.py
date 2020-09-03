@@ -1,9 +1,10 @@
-def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
-
+def has_negatives(array):
+    cache = {}
+    result = []
+    for item in array:
+        cache[item] = item
+        if -item in cache and item != 0:
+            result.append(abs(item))
     return result
 
 
