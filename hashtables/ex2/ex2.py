@@ -9,6 +9,17 @@ def reconstruct_trip(tickets, length):
     """
     YOUR CODE HERE
     """
-    # Your code here
+
+    flights = dict()
+    route = [None] * length
+
+    for ticket in tickets:
+        flights[ticket.source] = ticket.destination
+    
+    destination = flights['NONE']
+
+    for num in range(length):
+        route[num] = destination
+        destination = flights[destination]
 
     return route
