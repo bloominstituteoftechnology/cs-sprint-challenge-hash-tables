@@ -1,9 +1,27 @@
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    # Create an empty dict
+    counts = {}
 
+    # We'll use a nested for loop to go through our array
+    for i in arrays:
+        for j in i:
+            # If j is not in our dictionary
+            if j not in counts:
+                # Set it to 0
+                counts[j] = 0
+            # We'll increment by 1
+            counts[j] += 1
+
+    result = []
+
+    # We'll grab the key-value pairs using the items() method
+        # Items() returns the dictionary's key-value pairs
+    for k, v in counts.items():
+        # If the value is equal to the number of items in our list
+        if v == len(arrays):
+            # We can append the key to our result list
+            result.append(k)
+    # Then we'll return the result
     return result
 
 
