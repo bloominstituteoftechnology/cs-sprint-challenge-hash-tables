@@ -1,5 +1,15 @@
 def finder(files, queries):
 
+    paths = {}
+
+    for path in files:
+        good_file_name = path.split('/')[-1]
+
+        if good_file_name not in paths:
+            paths[good_file_name] = [path]
+
+
+
     return result
 
 
