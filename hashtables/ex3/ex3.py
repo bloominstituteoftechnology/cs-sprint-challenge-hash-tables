@@ -1,8 +1,21 @@
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    
+    map = {}
+    for a in arrays:
+        for n in a:
+            value = map.get(n)
+            if value is None:
+                map[n] = 1
+            else:
+                map[n] = value+1
+    count = len(arrays)
+    result = []
+    for n in map.keys():
+        value = map[n]
+        if value == count:
+            result.append(n)
+
+    # print(result)
 
     return result
 
