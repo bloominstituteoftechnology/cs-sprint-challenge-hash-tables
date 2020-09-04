@@ -2,9 +2,18 @@ def has_negatives(a):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    dictionary = dict()
 
+    result = []
+
+    for i in a:
+        dictionary[i] = 1
+        if i != 0 and -i in dictionary:
+            result.append(abs(i))
+
+    print(f"{dictionary}")
     return result
+    
 
 
 if __name__ == "__main__":
