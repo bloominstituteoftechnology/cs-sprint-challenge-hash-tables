@@ -7,8 +7,15 @@ def finder(files, queries):
 
         if good_file_name not in paths:
             paths[good_file_name] = [path]
+        else:
+            paths[good_file_name].append(path)
 
+    result = []
 
+    for query in queries:
+        if query in paths:
+            for path in paths[query]:
+                result.append(path)
 
     return result
 
