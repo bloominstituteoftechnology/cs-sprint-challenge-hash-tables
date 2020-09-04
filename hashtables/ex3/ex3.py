@@ -12,8 +12,6 @@ def dict_value(value, dicts):
 # I plan on checking the last dict and checking if any other dictionaries contain that value
 # append that 
 
-
-
 def intersection(arrays):
     
     unique_values_dictionary = []
