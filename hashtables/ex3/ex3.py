@@ -1,10 +1,24 @@
 def intersection(arrays):
+    twoDimensionalArrray = arrays
+    numberOfNestedArrays = len(twoDimensionalArrray)
     """
     YOUR CODE HERE
     """
-    # Your code here
+    hashTable = {}
+    solution = []
+    
+    for array in twoDimensionalArrray:
+        for number in array:
+            if number not in hashTable:
+                hashTable[number] = 1
+            else: #number in hashTable
+                hashTable[number] +=1
+            
+    for (number, count) in hashTable.items():
+        if count == numberOfNestedArrays:
+            solution.append(number)
 
-    return result
+    return solution
 
 
 if __name__ == "__main__":

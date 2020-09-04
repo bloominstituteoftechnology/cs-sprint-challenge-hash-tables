@@ -1,10 +1,19 @@
 def has_negatives(a):
+    array = a
     """
     YOUR CODE HERE
     """
-    # Your code here
-
-    return result
+    hashTable = {}
+    solution = []
+    
+    for number in array:
+        number = abs(number)
+        if hashTable.get(number) is None:
+            hashTable[number] = "Added this number to hashtable"
+        else: #already exists
+            solution.append(number)
+            
+    return solution
 
 
 if __name__ == "__main__":
