@@ -6,28 +6,28 @@ def finder(files, queries):
     """
     YOUR CODE HERE
     """
-    # set up dict
-    my_dict = {}
+    # set up cache
+    cache = {}
     # results list
     result = []
-    # making a dict of paths
+    # making a cache of paths
     for path in files:
         # the file is the last name after last / divider
         file_item = path.split('/')[-1]
-        # if item is in my_dict
-        if file_item in my_dict:
+        # if item is in cache
+        if file_item in cache:
             # append path to locations that are known
-            my_dict[file_item].append(path)
+            cache[file_item].append(path)
         else:
-            # create a list if item is not in my_dict
-            my_dict[file_item] = [path]
+            # create a list if item is not in cache
+            cache[file_item] = [path]
 
     #  loop to check queries
     for q in queries:
-        # if query is in my_dict
-        if q in my_dict:
-            # set results to my_dict
-            results = my_dict[q]
+        # if query is in cache
+        if q in cache:
+            # set results to cache
+            results = cache[q]
             # return a list of paths
             # return lists into one list
             for path in results:

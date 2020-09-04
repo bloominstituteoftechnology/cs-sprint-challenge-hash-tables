@@ -5,16 +5,16 @@ def has_negatives(a):
     # set up variables
     # result list
     result = []
-    # set up hashtable dict
-    my_dict = {}
+    # set up hashtable cache
+    cache = {}
 
     # loop through the list
     for num in a:
-        # set up num int in dict
-        my_dict[num] = num
+        # set up num int in cache
+        cache[num] = num
 
-        # if number isn't 0 and in dict
-        if num != 0 and - num in my_dict:
+        # if number isn't 0 and in cache
+        if num != 0 and - num in cache:
             # return number as pos and append
             result.append(abs(num))
 

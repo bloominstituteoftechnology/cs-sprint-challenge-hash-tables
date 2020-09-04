@@ -9,22 +9,22 @@ def reconstruct_trip(tickets, length):
     """
     YOUR CODE HERE
     """
-    # set up dict
-    my_dict = {}
+    # set up cache
+    cache = {}
     # setting up list (route)
     route = [None] * length
 
     # go through all tickets
     for ticket in tickets:
-        # set dict source
-        my_dict[ticket.source] = ticket.destination
-    # reset my dict
-    next = my_dict["NONE"]
+        # set cache source
+        cache[ticket.source] = ticket.destination
+    # reset my cache
+    next = cache["NONE"]
 
     for r in range(0, length):  # iterate through range
-        # set route dict
+        # set route cache
         route[r] = next
-        # set the next destination to dict
-        next = my_dict[next]
+        # set the next destination to cache
+        next = cache[next]
 
     return route
