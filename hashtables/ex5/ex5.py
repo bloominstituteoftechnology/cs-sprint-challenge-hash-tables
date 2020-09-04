@@ -1,12 +1,20 @@
-# Your code here
-
-
+import os
 
 def finder(files, queries):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    table = {}
+    for f in files:
+        base = os.path.split(f)[-1]
+        if base in table:
+            table[base].append(f)
+        else:
+            table[base] = [f]
+    result = []
+    for q in queries:
+        if q in table:
+            result += table[q]
 
     return result
 
