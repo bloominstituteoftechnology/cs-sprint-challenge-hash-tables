@@ -1,6 +1,6 @@
 import unittest
 
-from ex2 import Ticket, reconstruct_trip
+from ex2 import *
 
 
 class TestEx2(unittest.TestCase):

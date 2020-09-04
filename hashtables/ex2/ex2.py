@@ -41,7 +41,7 @@ def reconstruct_trip(tickets, length):
     for t in tickets:
         cache[t.source] = t.destination
 
-    flightplan = cache['None']
+    flightplan = cache['NONE']
 
     for flight in range(length):
         route[flight] = flightplan
