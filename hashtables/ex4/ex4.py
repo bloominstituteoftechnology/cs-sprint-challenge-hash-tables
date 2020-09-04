@@ -1,8 +1,14 @@
 def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    negatives_by_num = {}
+
+    for num in a:
+        negatives_by_num[num] = -num
+
+    result = []
+
+    for num in negatives_by_num.keys():
+        if num > 0 and negatives_by_num[num] in negatives_by_num:
+            result.append(num)
 
     return result
 
