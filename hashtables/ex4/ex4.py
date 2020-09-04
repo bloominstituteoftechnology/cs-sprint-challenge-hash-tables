@@ -11,7 +11,6 @@ def has_negatives(a):
         if i != 0 and -i in dictionary:
             result.append(abs(i))
 
-    print(f"{dictionary}")
     return result
     
 
