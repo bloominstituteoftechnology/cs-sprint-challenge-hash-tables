@@ -7,13 +7,10 @@ def has_negatives(a):
     result = []
 
     for num in a:
-        if num > 0:
+        if num != 0:
             cache[num] = 1
-        else:
-            cache[num] = 0
-
-        if -num in cache:
-            result.append(abs(num))
+            if -num in cache:
+                result.append(abs(num))
 
     return result
 
