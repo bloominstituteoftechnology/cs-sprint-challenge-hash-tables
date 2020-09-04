@@ -23,11 +23,17 @@ Commit your code regularly and meaningfully. This practice helps both you (in ca
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your answers beforehand.
 
 1. Hashing functions
+    to get a unique key for a value we're storing or for security reasons like hashing a password before we store in a database
 2. Collision resolution
+    we don't want our hash to assign the same unique key to multiple values, therefore we handle for these cases by implementing a data structure such as a linked list
 3. Performance of basic hash table operations
+    O(1)
 4. Load factor
+    load factor is the amount of time taken to load data requested (amount of elements // capacity)
 5. Automatic resizing
+    The handling of hash table resizing when load factor meets certain thresholds 
 6. Various use cases for hash tables
+    storing data's key and value so that we may access them quicker later. The advantage is that we will always access an index for a value rather than iterating through whole data set and checking if value exists
 
 We expect you to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
