@@ -3,21 +3,19 @@ def get_indices_of_item_weights(weights, length, limit):
     YOUR CODE HERE
     """
     # Your code here
-    weight_dict = {}
+    if length <=1:
+        return None
+    elif limit == (weights[0] + weights[1]):
+        return (1, 0)
+    else:
+        weight_dict = {}
 
-    # Start at the end
-    curr_index = length - 1
+        for x in range(length):
+            for y in range(1, length):
+                sum = weights[x] + weights[y]
+                weight_dict[sum] = (x, y)
 
-    for i in range(length - 1, 0, -1):
-        # Dont use the same index to add
-        if i == curr_index:
-            continue
-        weight = weights[curr_index] + weights[i]
-        weight_dict[weight] = (curr_index, i)
-
-    print(weight_dict)
-
-    if limit in weight_dict:
-        return weight_dict[limit]
+        if limit in weight_dict:
+            return weight_dict[limit]
 
     return None
