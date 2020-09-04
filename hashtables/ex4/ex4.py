@@ -5,7 +5,7 @@ def has_negatives(a):
     # Your code here
     cache = {}
     result = []
-    #loops thru and caches all values into HT
+    #loops thru and caches all values into cache
     for x in a:
         cache[x] = x
         #checks to see if negative value of x is in cache

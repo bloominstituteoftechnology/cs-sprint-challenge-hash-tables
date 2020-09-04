@@ -7,8 +7,18 @@ def finder(files, queries):
     YOUR CODE HERE
     """
     # Your code here
+    # result = []
+    # seen = {}
 
-    return result
+    # for f in files:
+    #     f.split('/')
+    #     for queries in files:
+    #         # for f in files:
+    #         #     f.split('/')
+    #         if queries in f:
+    #             result.append(queries)
+    #             seen[queries] = result
+    # return result
 
 
 if __name__ == "__main__":
