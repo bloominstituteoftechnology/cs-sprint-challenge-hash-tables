@@ -8,7 +8,7 @@ class TestEx2(unittest.TestCase):
     def test_small(self):
         result = intersection([
             [1,2,3],
-            [1,4,5],
+            [1,2,5],
             [1,6,7]
         ])
         self.assertTrue(result == [1])
@@ -35,8 +35,8 @@ class TestEx2(unittest.TestCase):
 
     def test_large(self):
         arrays = [
-            list(range(1000000, 2000000)) + [1,2,3],
-            list(range(2000000, 3000000)) + [1,2,3],
+            list(range(1000000, 2000000)) + [1,2,3,4],
+            list(range(2000000, 3000000)) + [1,2,3,4],
             list(range(3000000, 4000000)) + [1,2,3],
             list(range(4000000, 5000000)) + [1,2,3],
             list(range(5000000, 6000000)) + [1,2,3],
