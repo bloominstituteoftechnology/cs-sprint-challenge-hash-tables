@@ -3,7 +3,19 @@ def intersection(arrays):
     YOUR CODE HERE
     """
     # Your code here
-
+    #iterate through the first array hashing each item
+    #iterate through second:
+        #if item in second in first then append to intersections
+    #continue through lists checking if items in intersections is in current
+    chill = None
+    for i in range(len(arrays)):
+        arrays[i] = {x : x for x in arrays[i]}
+        if i == 0:
+            chill = arrays[i]
+        else:
+            temp = {x: chill[x] for x in chill if x in arrays[i]}
+            chill = temp
+    result = list(chill)
     return result
 
 
