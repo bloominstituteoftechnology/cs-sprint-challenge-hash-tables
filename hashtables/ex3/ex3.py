@@ -1,8 +1,21 @@
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    
+    lists = arrays
+    list_count = len(lists)
+    
+    tally = {}
+    
+    for i in lists[0]:
+        tally[i] = 1
+        
+    for other_list in lists[1:]:
+        
+        for el in other_list:
+            if el in tally:
+                tally[el] += 1
+                
+    final_list = [k for (k,v) in tally.items() if v == list_count]
+    result = final_list
 
     return result
 
