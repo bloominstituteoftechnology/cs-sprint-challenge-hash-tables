@@ -6,9 +6,28 @@ def finder(files, queries):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    dict = {}
 
-    return result
+    for item in files:
+        x = item.rfind("/")
+        x += 1
+        q = item[x:]
+
+        if q in dict:
+            l = []
+
+            x = dict[q]
+            l.extend(x)
+            l.append(item)
+            dict[q] = l
+        else:
+            dict[q] = item
+
+    l = []
+    for item in queries:
+        if item in dict:
+            l.append(dict[item])
+    return l
 
 
 if __name__ == "__main__":
