@@ -3,7 +3,24 @@ def intersection(arrays):
     YOUR CODE HERE
     """
     # Your code here
+    cache = {}
+    result = []
 
+    list_len = len(arrays)
+
+    # going through each list in the array
+    for num_list in arrays:
+        # going through each number in the list
+        for number in num_list:
+            # checks if number is already in the cache, if not it will initialize number with 1
+            if number in cache:
+                cache[number] += 1
+            else:
+                cache[number] = 1
+            
+            if cache[number] == list_len:
+                result.append(number)
+    # return result
     return result
 
 
