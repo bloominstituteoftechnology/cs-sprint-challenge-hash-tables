@@ -9,6 +9,7 @@ def intersection(arrays):
         for i in array:
 
             dict[i] = True
+            
         dicts.append(dict)
 
     in_all = True
