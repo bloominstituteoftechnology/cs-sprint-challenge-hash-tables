@@ -5,10 +5,22 @@ class Ticket:
         self.destination = destination
 
 
-def reconstruct_trip(tickets, length):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
 
+def reconstruct_trip(tickets, length):
+
+    map = {}
+    for ticket in tickets:
+        map[ ticket.source] = ticket.destination
+    
+    # print (map)
+    route = []
+    start = "NONE"
+    end = None
+    while end is not "NONE":
+        end = map.get(start)
+        route.append(end)
+        start = end
+
+
+    # print(route)
     return route

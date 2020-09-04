@@ -1,8 +1,24 @@
 def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    map = {} 
+
+    for n in a:
+        if n != 0:
+            an = abs(n)
+            value = map.get(an)
+            if value is None:
+                map[an] = n
+            else:
+                map[an] = n+value
+
+    # print(map)
+    result = []
+
+    for n in map.keys():      
+        value = map.get(n)
+        if value == 0:
+            result.append(n)
+
+
 
     return result
 
