@@ -6,8 +6,7 @@ morning of, you woke up late and had to scramble to the airport to catch
 your first flight. However, in your rush, you accidentally scrambled all
 your flight tickets. You don't know the route of your entire trip now!
 
-Write a function `reconstruct_trip` to reconstruct your trip from your
-mass of flight tickets. Each ticket is represented as a class with the
+Write a function `reconstruct_trip` to reconstruct your trip from your mass of flight tickets. Each ticket is represented as a class with the
 following form:
 
 ```
