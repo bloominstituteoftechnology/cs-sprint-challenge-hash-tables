@@ -17,9 +17,10 @@ def get_indices_of_item_weights(weights, length, limit):
         pair = limit - weight
 
         if pair in cache:
-            j = cache[limit]
+            j = cache[pair]
             return [i, j]
         else:
             cache[weight] = i
+
 
     return None
