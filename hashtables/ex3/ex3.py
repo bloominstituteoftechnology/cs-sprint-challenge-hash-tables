@@ -2,7 +2,32 @@ def intersection(arrays):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    dicts =[]
+
+    for array in arrays:
+        dict = {}
+        for i in array:
+
+            dict[i] = True
+        dicts.append(dict)
+
+    in_all = True
+    result =[]
+    for item in dicts[0].keys():
+        
+        for dict in dicts:
+            if item in dict:
+                pass
+            else:
+                
+                in_all = False
+        
+        if in_all == True:
+            result.append(item)
+        else:
+            pass
+
+        in_all = True
 
     return result
 
