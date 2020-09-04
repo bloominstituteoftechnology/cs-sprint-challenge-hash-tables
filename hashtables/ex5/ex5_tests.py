@@ -28,15 +28,15 @@ class TestEx2(unittest.TestCase):
     def test_large(self):
         files = []
 
-        for i in range(500000):
+        for i in range(50):
             files.append(f"/dir{i}/file{i}")
 
-        for i in range(500000):
+        for i in range(50):
             files.append(f"/dir{i}/dirb{i}/file{i}")
 
         queries = []
 
-        for i in range(1000000):
+        for i in range(100):
             queries.append(f"nofile{i}")
 
         queries += [
