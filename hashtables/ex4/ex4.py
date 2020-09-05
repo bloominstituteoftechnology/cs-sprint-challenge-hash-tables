@@ -1,8 +1,15 @@
-def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+def has_negatives(lista):
+    negs = {}
+    possy = {}
+    for i in lista:
+        if i > 0:
+            possy[i] = -i
+        else:
+            negs[i] = True
+    result = []
+    for t in possy.items():
+        if t[1] in negs:
+            result.append(t[0])
 
     return result
 
