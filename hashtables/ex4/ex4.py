@@ -6,6 +6,9 @@ def has_negatives(a):
     table = {}
 
     for ele in a:
+        if ele == 0:
+            continue
+        
         table[abs(ele)] = table.get(abs(ele), 0) + ele
 
     result = []
