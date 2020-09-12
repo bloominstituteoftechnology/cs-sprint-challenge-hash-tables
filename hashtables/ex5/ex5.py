@@ -6,7 +6,18 @@ def finder(files, queries):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    result = []
+    file_hash = {}
+
+    for q in queries:
+        file_hash[q] = q
+
+    for f in files:
+        seperated = f.split('/')
+        match = seperated[len(seperated) - 1]
+
+        if match in file_hash:
+            result.append(f)
 
     return result
 
