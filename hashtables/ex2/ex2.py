@@ -12,25 +12,29 @@ def reconstruct_trip(tickets, length):
     # Will first put the items in a cache
     my_cache = {}
     route = []
-    lookfor = None
+    lookfor = ""
     for ticket in tickets:        
         # will put source as the key and destination as the value
         # if we find the source that is none we will not put this 
         # in the hash tabel but will put that in the route list (array) to start
-        if ticket.source == None:
+        if ticket.source == "NONE":
             route.append(ticket.destination)
             lookfor = ticket.destination
-        my_cache[ticket.source] = ticket.destination
-    
+        else:
+            my_cache[ticket.source] = ticket.destination
+   
     while True:
         if lookfor in my_cache:
+            
             # will want to then append 
             # the route with the destination
             lookfor = my_cache[lookfor]
-            if lookfor != None:
-                route.append(lookfor)
-            else:
+            route.append(lookfor)
+            if lookfor == "NONE":
                 break
+            
+                
+    
             
         
 
