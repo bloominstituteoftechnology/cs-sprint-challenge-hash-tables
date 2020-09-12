@@ -1,8 +1,12 @@
 def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    result = []
+    has_neg_dict = {}
+
+    for num in a:
+        has_neg_dict[num] = num
+
+        if num != 0 and -num in has_neg_dict:
+            result.append(abs(num))
 
     return result
 
