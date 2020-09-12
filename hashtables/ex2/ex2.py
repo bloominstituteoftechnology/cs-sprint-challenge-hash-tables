@@ -10,5 +10,8 @@ def reconstruct_trip(tickets, length):
     YOUR CODE HERE
     """
     # Your code here
-
+    ht = { ticket.source: ticket.destination for ticket in tickets }
+    route = [ht["NONE"]]
+    for _ in range(length-1):
+        route.append(ht[route[-1]])
     return route
