@@ -1,10 +1,18 @@
-def intersection(arrays):
+from typing import List
+def intersection(arrays: List) -> List:
     """
     YOUR CODE HERE
     """
-    # Your code here
+    result = {}
+    intersects = {}
+    for ii in arrays:
+        for num in ii:
+            if num not in intersects:
+                intersects[num] = 1
+            else:
+                intersects[num] += 1
 
-    return result
+    return [res for res, val in intersects.items() if val == len(arrays)]
 
 
 if __name__ == "__main__":
