@@ -1,8 +1,13 @@
+from functools import reduce
+# from hashtable import HashTable
+
+
 def intersection(arrays):
     """
     YOUR CODE HERE
     """
     # Your code here
+    result = list(reduce(lambda i, j: i & j, (set(x) for x in arrays)))
 
     return result
 
