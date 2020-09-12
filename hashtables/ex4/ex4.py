@@ -2,7 +2,12 @@ def has_negatives(a):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    result = []
+    tracker = {}
+    for num in a:
+        if num * -1 in tracker:
+            result.append(abs(num))
+        tracker[num] = None
 
     return result
 
