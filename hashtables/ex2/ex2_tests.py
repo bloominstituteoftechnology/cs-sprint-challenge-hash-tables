@@ -1,6 +1,6 @@
 import unittest
 
-from ex2 import Ticket, reconstruct_trip
+# from ex2 import Ticket, reconstruct_trip
 
 
 class TestEx2(unittest.TestCase):
@@ -38,6 +38,22 @@ class TestEx2(unittest.TestCase):
 
         self.assertTrue(expected == result)
 
+class Ticket:
+    def __init__(self, source, destination):
+        self.source = source
+        self.destination = destination
+
+
+def reconstruct_trip(tickets, length):
+    route = [None] * length
+    # start points
+    s = {}
+    for i in range(length):
+        s[tickets[i].source] = tickets[i].destination
+    route[0] = s["NONE"]
+    for i in range(1, length):
+        route[i] = s[route[i - 1]]
+    return route
 
 if __name__ == '__main__':
     unittest.main()
