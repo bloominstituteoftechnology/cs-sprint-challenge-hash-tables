@@ -2,11 +2,6 @@ def intersection(arrays):
     my_dict = {}
     result = []
 
-    # for index in len(arrays):
-    #     array = arrays[index]
-    #     my_dict[index] = array
-    #     for 
-
     for array in arrays:
         for element in array:
             if element not in my_dict:
