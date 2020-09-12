@@ -1,6 +1,7 @@
 def intersection(arrays):
     """
-    YOUR CODE HERE
+    `intersection` is a function that accepts an array of integer lists
+    and returns a list of the integers that are included in every list
     """
     # Working objects/variables
     arr_maps = []
