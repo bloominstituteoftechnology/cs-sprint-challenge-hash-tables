@@ -7,8 +7,18 @@ class Ticket:
 
 def reconstruct_trip(tickets, length):
     """
-    YOUR CODE HERE
+    given a list of tickets and the number of tickets, finds
+    the round-trip through through those tickets.
     """
-    # Your code here
+    
+    d = {}
+    for ticket in tickets:
+        d[ticket.source] = ticket.destination
+
+    ii = "NONE"
+    route = []
+    for jj in range(length):
+        route.append(d[ii])
+        ii = d[ii]
 
     return route
