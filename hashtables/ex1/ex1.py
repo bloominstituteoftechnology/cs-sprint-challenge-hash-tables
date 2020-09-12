@@ -20,7 +20,7 @@ def get_indices_of_item_weights(weights, length, limit):
             lower = limit - higher
             if lower in table:
                 if higher != lower:
-                    if table[higher][0] > table[lower][0]:
+                    if table[higher][0] > table[lower][0]: # higher index first
                         return (table[higher][0], table[lower][0])
                     else:
                         return (table[lower][0], table[higher][0])
