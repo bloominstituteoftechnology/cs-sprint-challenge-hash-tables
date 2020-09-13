@@ -11,11 +11,11 @@ def finder(files, queries):
         if filename in cache:
             cache[filename].append(path)
         else:
-            cache[filename] = path
+            cache[filename] = [path]
     
     for filename in queries:
         if filename in cache:
-            result.append(cache[filename])    
+            result.extend(cache[filename])    
     return result
 
 
