@@ -5,7 +5,6 @@ def get_indices_of_item_weights(weights, length, limit):
 
     package = {}
 
-    # Go through items in weights & add to the dictionary.
     for item in range(length):
         weight = weights[item]
 
