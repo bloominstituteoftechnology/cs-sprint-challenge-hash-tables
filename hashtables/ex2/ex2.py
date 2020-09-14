@@ -23,5 +23,5 @@ def reconstruct_trip(tickets, length):
     for i in range(length):
         route[i] = next 
         next = cache[next]
-
+        
     return route
