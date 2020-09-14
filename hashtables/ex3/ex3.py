@@ -1,8 +1,22 @@
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+
+    my_dict = {}
+
+    for array in arrays:
+        for num in array:
+            value = my_dict.get(num)
+            if value is None:
+                my_dict[num] = 1
+            else:
+                my_dict[num] = value + 1
+            
+    length = len(arrays)
+    result = []
+
+    for num in my_dict.keys():
+        value = my_dict[num]
+        if value == length:
+            result.append(num)
 
     return result
 
