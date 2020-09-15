@@ -4,6 +4,18 @@ def has_negatives(a):
     """
     # Your code here
 
+    hashtable = {}
+
+    for i in a:
+        if i < 0:
+            hashtable[abs(i)] = i
+
+    result = [i for i in a if i in hashtable]
+
+    # for i in a:
+    #     if i in hashtable:
+    #         result.append(i)
+
     return result
 
 
