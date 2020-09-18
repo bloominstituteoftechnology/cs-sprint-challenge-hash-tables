@@ -3,7 +3,16 @@ def intersection(arrays):
     YOUR CODE HERE
     """
     # Your code here
+    hash_table = {}
 
+    for a in arrays:
+        for x in a:
+            if x in hash_table:
+                hash_table[x] += 1
+            else:
+                hash_table[x] = 1
+    
+    result = [x[0] for x in hash_table.items() if x[1] == len(arrays)]
     return result
 
 
