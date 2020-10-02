@@ -1,4 +1,5 @@
 # Sprint Challenge: Hash Tables
+#Questions -> complete
 
 **Read these instructions carefully. Understand exactly what is expected _before_ starting this Sprint Challenge.**
 
