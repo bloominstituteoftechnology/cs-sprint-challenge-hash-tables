@@ -7,6 +7,7 @@ class TestEx4(unittest.TestCase):
 
     def test_small(self):
         result = has_negatives([1,2,3])
+        print(result)
         self.assertTrue(result == [])
 
         result = has_negatives([1,2,3,-4])
