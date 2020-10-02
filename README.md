@@ -18,19 +18,6 @@ This challenge requires you to solve algorithm problems that are amenable to bei
 
 Commit your code regularly and meaningfully. This practice helps both you (in case you ever need to return to old code for any number of reasons) and your Team Lead as they evaluate your solution.
 
-## Interview Questions
-
-Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your answers beforehand.
-
-1. Hashing functions
-2. Collision resolution
-3. Performance of basic hash table operations
-4. Load factor
-5. Automatic resizing
-6. Various use cases for hash tables
-
-We expect you to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
-
 ## Instructions
 
 ### Task 1: Project Set-Up
