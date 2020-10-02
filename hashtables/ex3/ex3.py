@@ -1,7 +1,7 @@
 def intersection(arrays):
     result = [] 
     num_count = {}
-
+    
     for i in arrays:
         for k in i:
             if k in num_count:
@@ -17,6 +17,7 @@ def intersection(arrays):
             continue
 
     return result
+
 
 if __name__ == "__main__":
     arrays = []
