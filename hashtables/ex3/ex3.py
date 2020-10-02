@@ -1,11 +1,10 @@
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
-
+    result = []
+    
+    for i in range(1, len(arrays)):
+        result = [num for num in arrays[0] if num in arrays[i]]
+        
     return result
-
 
 if __name__ == "__main__":
     arrays = []
