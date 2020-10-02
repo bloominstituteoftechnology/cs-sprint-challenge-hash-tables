@@ -1,4 +1,5 @@
 # Sprint Challenge: Hash Tables
+#Questions -> complete
 
 **Read these instructions carefully. Understand exactly what is expected _before_ starting this Sprint Challenge.**
 
@@ -28,6 +29,29 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 4. Load factor
 5. Automatic resizing
 6. Various use cases for hash tables
+
+1. Hashing functions
+    R: A hash function is a function where the input is any data, and the output is a number.
+
+2. Collision resolution
+    R: When two items hash to the same slot, we must have a systematic method for placing the second item in the hash table. This process is called collision resolution. We can use Chaining for collision resolution.
+
+3. Performance of basic hash table operations
+    R: The performance of hash tables for search, insertion, and deletion is constant time (O(1)) in the average case. However, in the worst case, those same operations are done in linear time (O(n)). The more collisions that our hash table has, the less performant the hash table is.
+
+4. Load factor
+    R:Hash tables use an array for storage, so to calculate the load factor we take the of items stored in the hash table divided by the number of slots.
+
+5. Automatic resizing
+    R:Resizing is considered to be an expensive operation, so we don't want to resize too often. If the Hash Table
+    is too large for the data that is being stored, then memory will be wasted, if the Hast Table is too small for the data being stored then we will run out of slots/storage. One way to know when to resize your hash table is to compute the load factor whenever an item is inserted or deleted into the hash table. If the load factor is too high or too low, then you need to resize.
+
+
+6. Various use cases for hash tables
+    R:  1. Searching for elements within a large data set
+        2. Find duplicate elements in a data set
+        3. Quickly store and retrieve elements from a large data set
+
 
 We expect you to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
