@@ -16,10 +16,10 @@ def intersection(arrays):
     for number_list in arrays:
         for number in number_list:
             if number in cache:
-                # if the number is cache, increment number by 1 (+=1)
+                # if the number is cache, incremenet the key count
                 cache[number] +=1
             else:
-                #if the number is not in cache, add the number to the cache
+                #if the number is not in cache, add a key count of 1
                 cache[number] = 1
             #if the number in cache is the same as any numbers inside the list_count
             if cache[number] == list_count:
