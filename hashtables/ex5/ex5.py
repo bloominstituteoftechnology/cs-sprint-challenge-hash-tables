@@ -8,36 +8,29 @@ def finder(files, queries):
     """
     cache = {}
     result = []
-    answer = []
     for query in queries:
         cache[query] = []
     for file in files:
-        f = (file + '.')[:-1]
         broken = file.rsplit('/', 1)
         broken = broken[-1]
         if broken in cache:
-            #start = cache[broken[-1]]
-            cache[broken] += f
+            cache[broken].append(file)
     for query in queries:
         if query in cache:
-            result.append(cache[query])
-    for item in result:
-        if len(item) > 0:
-            a = "".join(item)
-            answer.append(a)
-    print(answer)
-    # for query in queries:
-    #     if query in cache.values():
-    #         result.append(cache)
-        
-    return answer
+            for item in cache[query]:
+
+                result.append(item)
+      
+    return result
 
 
 if __name__ == "__main__":
     files = [
         '/bin/foo',
         '/bin/bar',
-        '/usr/bin/baz'
+        '/usr/bin/baz',
+        '/usr/foo'
+
     ]
     queries = [
         "foo",
