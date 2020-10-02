@@ -2,7 +2,26 @@ def intersection(arrays):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    result = []
+    cache = {}
+    arr = []
+    for array in arrays:
+        arr = arr + array
+    for item in arr:
+        if item in cache:
+            cache[item] += 1
+        else:
+            cache[item] = 1
+    
+    # for array in arrays:
+    #     for item in array:
+    #         if item in cache:
+    #             cache[item] += 1
+    #         else:
+    #             cache[item] = 1
+    for key in cache.keys():
+        if cache[key] == len(arrays):
+            result.append(key)
 
     return result
 
