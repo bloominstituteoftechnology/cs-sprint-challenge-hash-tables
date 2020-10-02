@@ -12,8 +12,10 @@ def get_indices_of_item_weights(weights, length, limit):
     for n in range(length):
         tar = limit - weights[n]
         print(f"target: {tar} = limit: {limit} - weights[n]: {weights[n]}")
+
         if tar in weight_index:
-            # Need to order by larger index first1
+            # Need to sort by large first
+
             if weight_index[tar] > n:
                 return (weight_index[tar], n)
             else:
