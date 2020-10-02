@@ -8,7 +8,7 @@ def has_negatives(a):
             if -i in cache:
                 result.append(abs(i))
 
-     return result
+    return result
 
 
 
