@@ -1,6 +1,6 @@
 
 def has_negatives(a):
-    # Absolute value can help here -- returns the base number without negative
+   
     result = []
     num_count = {}
 
