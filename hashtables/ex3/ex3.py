@@ -1,17 +1,15 @@
 def intersection(arrays):
-    result = []
-    
+    result = [] 
     num_count = {}
 
-    # Init arrays
     for i in arrays:
         for k in i:
             if k in num_count:
                 num_count[k] += 1
             else:
                 num_count[k] = 1
-    # Checking to see 
-    # Check if appears in all arrays
+    
+# Checking to see if it appears in all arrays
     for num in num_count:
         if num_count[num] == len(arrays):
             result.append(num)
@@ -19,7 +17,6 @@ def intersection(arrays):
             continue
 
     return result
-
 
 if __name__ == "__main__":
     arrays = []
