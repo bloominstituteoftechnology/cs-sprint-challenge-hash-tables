@@ -1,10 +1,22 @@
 def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+ # create a dictionary
+    cache = {}
+    
+    #create seperate lists
+    results = []
+  
+    for num in a:
+        if num != 0:
+           cache[num] = 1
+        if -num in cache:
+            results.append(abs(num))
 
-    return result
+            
+
+     
+ 
+ 
+    return results
 
 
 if __name__ == "__main__":
