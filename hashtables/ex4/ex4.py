@@ -1,8 +1,9 @@
 def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    neg = {}
+    for i in a:
+        if i > 0:
+            neg[i] = i
+    result = [abs(i) for i in a if i * -1 in neg]
 
     return result
 
