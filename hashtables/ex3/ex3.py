@@ -4,7 +4,27 @@ def intersection(arrays):
     """
     # Your code here
 
-    return result
+    #set hash table and set results array
+    hash_table = {}
+    results = []
+
+    ## nested for loop to go through the list of arrays
+    for array in arrays:
+        for i in array:
+            key = i
+            #if the key is not in the hash table - add it
+            if key not in hash_table:
+                hash_table[key] = 1
+            else:
+                #if key is in the hash table - add one
+                hash_table[key] += 1
+
+    #iterate over the hash table after it has been populated
+    for i in hash_table:
+        if hash_table[i] > 1:
+            #if the hash table has more than one item in it - append it to the results table
+            results.append(i)
+    return results
 
 
 if __name__ == "__main__":
