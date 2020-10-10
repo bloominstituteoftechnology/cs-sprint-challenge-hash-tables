@@ -4,7 +4,25 @@ def intersection(arrays):
     """
     # Your code here
 
-    return result
+    cache = {}
+    list = []
+
+    for inner_arr in arrays:
+        for element in inner_arr:
+            if element not in cache:
+                cache[element] = 1
+            else: 
+                cache[element] += 1
+
+    for item in cache:
+        if cache[item] == len(arrays):
+            list.append(item)
+
+    return list
+
+
+
+    # return result
 
 
 if __name__ == "__main__":
