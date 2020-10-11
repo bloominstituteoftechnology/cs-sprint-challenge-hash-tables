@@ -3,8 +3,19 @@ def intersection(arrays):
     YOUR CODE HERE
     """
     # Your code here
+    dict = {}
+    results = []
 
-    return result
+    # nested for loop to go through the list of arrays
+    for array in arrays:
+        for i in array:
+            dict[i] = dict[i] + 1 if i in dict else 1
+
+    for i in dict:
+        if dict[i] > 1:
+            results.append(i)
+
+    return results
 
 
 if __name__ == "__main__":
