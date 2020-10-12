@@ -10,5 +10,8 @@ def reconstruct_trip(tickets, length):
     YOUR CODE HERE
     """
     # Your code here
+    trip_itn = {}
+    
+    
 
     return route
