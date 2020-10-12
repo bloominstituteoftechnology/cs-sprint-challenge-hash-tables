@@ -23,12 +23,17 @@ Commit your code regularly and meaningfully. This practice helps both you (in ca
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your answers beforehand.
 
 1. Hashing functions
+    Hashing functions receives string as an input and generates integers.  It has to be deterministic like same input should yield same output.
 2. Collision resolution
+    Collisions occurs depending on how hash functions are written. If it is too simple hash function it may produce same results for different input. In that case collision will occur and best way to solve is to create a linkled list with inputs with same outputs.
 3. Performance of basic hash table operations
+    One of the greatest thing in hash table is O of time. It has constant O(1) time performance. 
 4. Load factor
+   Load factor is calculated by dividing number of items in array with its size.  It is helpful for resizing and commonly accepted value is 0.7
 5. Automatic resizing
+   Resizing the the hash table is useful when we need to add or delete and item from the hash table. By using the load factor resizing can help to add new item in the table by reallocating more memory. But it is good to remind us that it is an expensive operations. Because it just doesn't not copy past the key values it rebuild them.
 6. Various use cases for hash tables
-
+    It is useful to work with large datas. Because of its constant O(1) time. By caching the result or turning the data into hash table helps to speed up the performance. So literally any kind of information data or key, value pair can use it to help the perfomance. 
 We expect you to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
 ## Instructions
