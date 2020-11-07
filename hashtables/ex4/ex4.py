@@ -4,6 +4,14 @@ def has_negatives(a):
     """
     # Your code here
 
+    positives = {}
+
+    for i in a:
+        if i > 0:
+            positives[i] = i
+    
+    result = [i * -1 for i in a if i * -1 in positives]
+
     return result
 
 

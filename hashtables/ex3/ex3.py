@@ -4,6 +4,22 @@ def intersection(arrays):
     """
     # Your code here
 
+    lists = {}
+    result = []
+
+    for i in arrays:
+        for j in i:
+            x = lists.get(j)
+            if x is None:
+                lists[j] = 1
+            else:
+                lists[j] = x + 1
+
+    for i in lists.keys():
+        value = lists[i]
+        if value == len(arrays):
+            result.append(i)
+
     return result
 
 
