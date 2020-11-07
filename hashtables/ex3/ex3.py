@@ -2,7 +2,16 @@ def intersection(arrays):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    count_dict = {}
+    num_arrays = 0
+    for arr in arrays:
+        num_arrays += 1
+        for item in arr:
+            if item not in count_dict:
+                count_dict[item] = 1
+            else:
+                count_dict[item] += 1
+    result = [key for key, value in count_dict.items() if value == num_arrays]
 
     return result
 

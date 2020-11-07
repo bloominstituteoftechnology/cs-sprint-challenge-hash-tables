@@ -2,7 +2,12 @@ def has_negatives(a):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    num_dict = {}
+    for item in a:
+        if item < 0:
+            num_dict[item] = item
+
+    result = [num for num in a if num * -1 in num_dict]
 
     return result
 
