@@ -36,6 +36,8 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 6. Various use cases for hash tables
     To do the search, insert, delete the values quickly.
     To store the mapped pairs of key:value data.
+
+    
 We expect you to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
 ## Instructions
