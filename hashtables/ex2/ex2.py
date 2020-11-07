@@ -6,9 +6,21 @@ class Ticket:
 
 
 def reconstruct_trip(tickets, length):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    # put all the tickets in a dictionary
+    route = {}
+    for ticket in range(length):
+        # we want the source and then the destination
+        route[tickets[ticket].source] = tickets[ticket].destination
 
-    return route
+    trip = []
+    current_destination = "NONE"
+    
+    # go through the route putting it in order
+    while len(route) > 0:
+        new_destination = route[current_destination]
+        trip.append(route[current_destination])
+        del route[current_destination]
+        current_destination = new_destination
+
+    return trip
+
