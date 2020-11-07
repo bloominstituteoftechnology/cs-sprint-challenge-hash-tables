@@ -24,12 +24,18 @@ Commit your code regularly and meaningfully. This practice helps both you (in ca
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your answers beforehand.
 
 1. Hashing functions
+    Hashing functions are used to convert data to a hash code (ex. map a strig to an integer) in order to make it's size fit in a given hash table size or mapping table size. 
 2. Collision resolution
+    To resolve collision in a hash table linked lists are used if index of the value already filled. However if there are too many collisions, resizing is used to fix this problem.
 3. Performance of basic hash table operations
+    The average time complexity for hash table operations (search, insertion, deletion) is O(1)
 4. Load factor
+    It is the value which calculated by dividing the size of hash tale by the items in the table
 5. Automatic resizing
+    The re-sizing of the hash table needed to avoid proplem with too many collisions. The re-sizing is done when threshhold of 0.7 of hash table size is reached. When it happens, size of the hash table doubles and rehashing of all the values re-done. 
 6. Various use cases for hash tables
-
+    To do the search, insert, delete the values quickly.
+    To store the mapped pairs of key:value data.
 We expect you to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
 ## Instructions
