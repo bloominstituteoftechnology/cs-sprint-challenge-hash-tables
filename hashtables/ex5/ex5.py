@@ -1,12 +1,18 @@
-# Your code here
-
-
+import os
 
 def finder(files, queries):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    hash_table = {}
+    result = []
+
+    for path in files:
+        filename = os.path.basename(path)
+        paths_array = hash_table.get(filename, [])
+        paths_array.append(path)
+        hash_table[filename] = paths_array
+    
+    for filename in queries:
+        if filename in hash_table:
+            result.extend(hash_table[filename])
 
     return result
 
