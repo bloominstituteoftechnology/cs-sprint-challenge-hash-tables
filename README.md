@@ -22,12 +22,24 @@ Commit your code regularly and meaningfully. This practice helps both you (in ca
 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your answers beforehand.
 
-1. Hashing functions
-2. Collision resolution
-3. Performance of basic hash table operations
-4. Load factor
-5. Automatic resizing
-6. Various use cases for hash tables
+**1. Hashing functions**
+    A function that returns a hashed number value as a key which is then stored in a hash table. Hash functions must be deterministic, meaning everytime it recieves an input, it should return the same output. It also must return numbers within a specific range. 
+
+**2. Collision resolution** 
+    Solutions to prevent the data in a hash table from colliding, or having the same index value. Chaining, often used as a collision resolution, allows each index to hold a reference to a chain of items. 
+
+**3. Performance of basic hash table operations**
+    Basic hash table operations include: get, put, delete, and resize. They operate on constant time. O(1)
+
+**4. Load factor**
+    Load factor is calculated by dividing the number of items in a hash table by the total number of slots in an array. The greater the load factor, the greater the chance of a collision in a hash table which can lead to poor performance. An optimal load factor is less than 0.7 but also not too small. 
+
+**5. Automatic resizing** 
+    Resizing is done when the load factor of a hash table exceeds 0.7 or is too low. Usually, a hashtable is doubled in size when the load factor is too large. When resizing, all elements must be re-inserted into the new hash table through the hashing function which has the resizing method implemented. 
+
+**6. Various use cases for hash tables** 
+    Hash tables are ideally used when mapping one thing to another in order to look something up. Examples include: digital phone books, dns resolution, records of some sort. They are also often used in duplicate prevention and caching. 
+
 
 We expect you to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 

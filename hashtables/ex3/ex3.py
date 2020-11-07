@@ -1,9 +1,17 @@
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    ht = {} # initialize empty dict
 
+    result = [] # intitalize empty list to add intersections
+
+    for i in arrays:
+        for elem in i: 
+            if elem not in ht: 
+                ht[elem] = 1 # amt of elem in ht 
+            else: 
+                ht[elem] += 1 # add intersection to ht
+                if ht[elem] == len(arrays): # if intersection in every array
+                    result.append(elem) # add intersection to result 
+    
     return result
 
 
