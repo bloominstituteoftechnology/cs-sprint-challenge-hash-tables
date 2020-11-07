@@ -3,7 +3,7 @@
 For an input list of integers, we wish to know which positive numbers
 have corresponding negative numbers in the list.
 
-Example input:
+Example input: 
 
 ```python
 [ 1, -1, 2, 3, -4, -3, 4, -5, 6, 7 ]
