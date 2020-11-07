@@ -6,9 +6,26 @@ def finder(files, queries):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    cache = {}
+    results = []
 
-    return result
+    for paths in files:
+        slashes = paths.split('/')
+
+        word = slashes[-1]
+
+        if word not in cache:
+            cache[word] = []
+
+        cache[word].append(paths)
+
+    for query in queries:
+        if query in cache:
+            results += cache[query]
+
+    return results
+
+    
 
 
 if __name__ == "__main__":

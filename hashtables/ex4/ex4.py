@@ -2,6 +2,9 @@ def has_negatives(a):
     """
     YOUR CODE HERE
     """
+
+ 
+
   
 
 if __name__ == "__main__":
