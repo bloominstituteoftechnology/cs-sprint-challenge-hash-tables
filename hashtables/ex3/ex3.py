@@ -1,8 +1,19 @@
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    store = {}
+    for i, lst in enumerate(arrays):
+        for num in lst:
+            if num not in store:
+                if i == 0:
+                    store[num] = [str(i)]
+                elif num in store and len(store[num]) == i:
+                    store[num] += [str(i)]
+            else:
+                if len(store[num]) == i:
+                    store[num] += [str(i)]
+    result = []
+    for key, value in store.items():
+        if len(value) == len(arrays):
+            result.append(key)
 
     return result
 

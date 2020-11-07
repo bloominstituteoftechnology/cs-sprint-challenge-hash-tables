@@ -3,10 +3,20 @@
 
 
 def finder(files, queries):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    store = {}
+    for directory in files:
+        dir_splitted = directory.split('/')
+        for i in range(len(dir_splitted)):
+            if dir_splitted[i] != '':
+                if dir_splitted[i] in store:
+                    store[dir_splitted[i]] += ['/'.join(dir_splitted[:i+1])]
+                else:
+                    store[dir_splitted[i]] = ['/'.join(dir_splitted[:i+1])]
+
+    result = []
+    for q in queries:
+        if q in store:
+            result += store[q]
 
     return result
 
