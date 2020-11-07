@@ -3,9 +3,20 @@ def intersection(arrays):
     YOUR CODE HERE
     """
     # Your code here
+    dictionary = {}
+    result = []
+
+    for array in arrays:
+        for element in array:
+            if element not in dictionary:
+                dictionary[element] = 1
+            else:
+                dictionary[element] += 1
+
+            if dictionary[element] == len(arrays):
+                result.append(element)
 
     return result
-
 
 if __name__ == "__main__":
     arrays = []
