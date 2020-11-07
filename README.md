@@ -23,11 +23,24 @@ Commit your code regularly and meaningfully. This practice helps both you (in ca
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your answers beforehand.
 
 1. Hashing functions
+=> These functions take an input and give output as number/index.
+
 2. Collision resolution
+=> When two different input gives same hash output, they point only one address in table. If there is already that position filled up, it creates collision. Resolving this issue is called collision resolution.
+
 3. Performance of basic hash table operations
+=>  Add: O(n)
+    Search: O(n)
+    Delete: O(n)
+
 4. Load factor
+=> Load factor is the ratio of number of records to the number of addresses within a data structure.
+
 5. Automatic resizing
+=> When an insert is made such that the number of entries in a hash table exceeds the product of the load factor and the current capacity then the hash table will need to be rehashed. 
+
 6. Various use cases for hash tables
+=> Blockchain; Storing anything where order does not matter; Storing anything when faster search or update needed.
 
 We expect you to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
