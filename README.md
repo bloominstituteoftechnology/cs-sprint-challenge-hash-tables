@@ -23,10 +23,17 @@ Commit your code regularly and meaningfully. This practice helps both you (in ca
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your answers beforehand.
 
 1. Hashing functions
+--A hash function is any function that can be used to map data of arbitrary size to fixed-size values
 2. Collision resolution
+--Hash collisions are practically unavoidable when hashing a random subset of a large set of possible keys. For example, if 2,450 keys are hashed into a million buckets, even with a perfectly uniform random distribution, according to the birthday problem there is approximately a 95% chance of at least two of the keys being hashed to the same slot.
+
+Therefore, almost all hash table implementations have some collision resolution strategy to handle such events. Some common strategies are described below. All these methods require that the keys (or pointers to them) be stored in the table, together with the associated values.
 3. Performance of basic hash table operations
+--Suppose we are using a chained hash table with m buckets, and the number of elements in the hash table is n. Then the average number of elements per bucket is n/m, which is called the load factor of the hash table, denoted α. When an element that is not in the hash table is searched for, the expected length of the linked list traversed is α. Since there is always the initial (constant) cost of hashing, the cost of hash table operations with a good hash function is, on average, O(1 + α). If we can ensure that the load factor α never exceeds some fixed value αmax, then all operations will be O(1 + αmax) = O(1).
 4. Load factor
+--So, on an average, if there are n entries and b is the size of the array there would be n/b entries on each index. This value n/b is called the load factor that represents the load that is there on our map.
 5. Automatic resizing
+--When an insert is made such that the number of entries in a hash table exceeds the product of the load factor and the current capacity then the hash table will need to be rehashed. Rehashing includes increasing the size of the underlying data structure and mapping existing items to new bucket locations. In some implementations, if the initial capacity is greater than the maximum number of entries divided by the load factor, no rehash operations will ever occur
 6. Various use cases for hash tables
 
 We expect you to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
