@@ -61,7 +61,7 @@ def get_indices_of_item_weights(weights, length, limit):
             print(f'found! {check_weight}')
             if len(our_dict) == 1:
                 return(1,0)
-            if item < check_weight:
+            if our_dict[item] < our_dict[check_weight]:
                 print(our_dict[check_weight], our_dict[item])
                 return(our_dict[check_weight], our_dict[item])
             else:
