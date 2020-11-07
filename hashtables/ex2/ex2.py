@@ -50,18 +50,14 @@ def reconstruct_trip(tickets, length):
     # print(our_dict)
 
     route = []
-    route.append(our_dict['NONE']) #this adds the first dest (add the value LAX)
+
     last = our_dict['NONE'] #this adds LAX to last
 
-    while our_dict[last] != 'NONE': #while the destination is None, keep looping
-        #use the value of last item, to be key of the next item
-        route.append(our_dict[last]) #this has added SFO
-        next_key = our_dict[last]
-        last = our_dict[next_key] #this now contains BHM
+    for i in range(0,length):
         route.append(last)
-        # print(f'last is now {last}')
+        #use the value of last item, to be key of the next item
+        last = our_dict[last]
 
-    # route.append('NONE')
     print(route)
 
 
