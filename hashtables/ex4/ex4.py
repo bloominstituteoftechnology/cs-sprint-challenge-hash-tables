@@ -1,8 +1,14 @@
 def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    hash_table = {}
+    result = []
+
+    for integer in a:
+        abs_val = abs(integer)
+        if abs_val not in hash_table:
+            hash_table[abs_val] = integer
+        else:
+            if hash_table[abs_val] + integer == 0:
+                result.append(abs_val)
 
     return result
 
