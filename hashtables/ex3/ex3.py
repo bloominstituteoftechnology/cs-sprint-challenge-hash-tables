@@ -1,8 +1,14 @@
+from collections import defaultdict
+
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    hash_table = defaultdict(int)
+    result = []
+    
+    for array in arrays:
+        for item in array:
+            hash_table[item] += 1
+            if hash_table[item] == len(arrays):
+                result.append(item)
 
     return result
 
