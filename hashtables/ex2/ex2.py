@@ -17,5 +17,6 @@ def reconstruct_trip(tickets, length):
         new_source = route[i]
         new_dest = cache[new_source]
         route[i+1] = new_dest
+
     return route
 
