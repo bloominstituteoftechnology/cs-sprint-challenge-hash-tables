@@ -4,7 +4,14 @@ def has_negatives(a):
     """
     # Your code here
 
-    return result
+    dict = {}
+    results = []
+    for n in a: 
+        dict[n] = True
+    for n in a: 
+        if n > 0 and -n in dict: 
+            results.append(n)
+    return results
 
 
 if __name__ == "__main__":
