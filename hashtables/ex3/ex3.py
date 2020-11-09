@@ -1,9 +1,15 @@
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    store = {}
+    result = []
+    for arr in arrays:
+        for each in arr:
+            if each in store:
+                store[each] += 1
+            else:
+                store[each] = 1
 
+            if store[each] == len(arrays):
+                result.append(each)
     return result
 
 

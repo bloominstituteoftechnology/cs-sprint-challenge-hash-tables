@@ -1,9 +1,23 @@
 def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    result = []
+    negatives = {}
+    a.sort()
+    for num in a:
+        if num < 0:
+            negatives[-num] = num
+        if num > 0 and num in negatives:
+            result.append(num)
+    return result
 
+
+def has_negatives(arr):
+    store = {}
+    result = []
+    for each in arr:
+        if (each * -1) in store:
+            result.append(abs(each))
+        else:
+            store[each] = each
     return result
 
 
