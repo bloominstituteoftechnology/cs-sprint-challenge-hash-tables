@@ -1,24 +1,26 @@
+
 def intersection(arrays):
     """
     YOUR CODE HERE
     """
     cache = {}
-    second_cache = {}
     result = []
     for value in arrays[0]:
         cache[value] = True
     for i in range(1,len(arrays)):
+        second_cache = {}
         for value in arrays[i]:
-            try:
-                cache[value]
-            except KeyError:
-                cache[value] = False
             second_cache[value] = True
+            if value in cache:
+                continue
+            else:
+                cache[value] = False
+
         for key in cache.keys():
             if cache[key]:
-                try:
-                    second_cache[key]
-                except KeyError:
+                if key in second_cache:
+                    continue
+                else:
                     cache[key] = False
     for k,v in cache.items():
         if v:
