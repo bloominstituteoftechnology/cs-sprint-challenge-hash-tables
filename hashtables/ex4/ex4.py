@@ -2,8 +2,11 @@ def has_negatives(a):
     """
     YOUR CODE HERE
     """
-    # Your code here
-
+    negatives_dict = {}
+    for each in a:
+        negatives_dict[each] = ''
+    
+    result = [each for each in a if each > 0 and (0 - each) in negatives_dict]
     return result
 
 
