@@ -11,25 +11,21 @@ class Ticket:
     def get_destination(self):
         return self.destination
 
-#  Hash each ticket such that the starting location is the key and the destination is the value.
 def hash_tickets(tickets, length):
     dict = {}
-    # looop through array of tickets
+    
     for i in range(length):
         ticket = tickets[i]
-        # add starting airport(source) as key and destination as value
+        
         source, destination = ticket.get_source(), ticket.get_destination()
-        # destination equal to source
+        
         dict[source] = destination
     return dict
     
-# find the starting airport that equals to NONE and its destination. Then that destination is equal to another ticket starting and so on
-# length = the length of the array
 def reconstruct_trip(tickets, length):
     routes = hash_tickets(tickets, length)
     dict  = [routes["NONE"]] * length
     
-    # the `i`th location in the route can be found by checking the hash table for the `i-1`th location
     for i in range(1, len(dict)):
         dict[i] = routes[dict[i -1]]
     return dict
@@ -52,4 +48,4 @@ tickets = [ticket_1, ticket_2, ticket_3, ticket_4, ticket_5,
 
 print(reconstruct_trip(tickets, 10))
 
-# Expected Output = ["LAX", "SFO", "BHM", "FLG", "XNA", "CID", "SLC", "PIT", "ORD", "NONE"]
+
