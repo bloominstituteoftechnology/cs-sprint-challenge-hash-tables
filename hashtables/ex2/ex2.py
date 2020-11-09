@@ -18,7 +18,7 @@ def reconstruct_trip(tickets, length):
     # start with the destination value of the first one, which should have source None
     route = [dict["NONE"]]
     print(f'{route}')
-    for i in range(length - 2):
+    for i in range(length - 1):
         # start with None
         # Then pass None into the hash table, see what its destination is
         # add the destination
