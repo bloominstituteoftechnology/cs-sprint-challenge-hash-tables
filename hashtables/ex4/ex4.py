@@ -1,5 +1,5 @@
 def has_negatives(arr):
-    # create a dict with a key for the original number
+    # create a dict wih a key for the original number
     # and a value for the count of corresponding negatives
     cache_list = [1]*len(arr)
     # actual cache is now housing the list values

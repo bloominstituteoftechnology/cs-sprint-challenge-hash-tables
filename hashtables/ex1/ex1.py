@@ -1,6 +1,6 @@
 def get_indices_of_item_weights(weights, length, limit):
     """
-    YOUR CODE HERE
+    YOUR CODE HER
     """
     cache = {}
     for i in range(length):
