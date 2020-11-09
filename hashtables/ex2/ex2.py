@@ -9,6 +9,18 @@ def reconstruct_trip(tickets, length):
     """
     YOUR CODE HERE
     """
-    # Your code here
-
-    return route
+    # all tickets
+    cache = {}
+    # add all tickets to cache
+    for t in tickets:
+        cache[t.source] = t.destination
+    # list that returns destination
+    itinerary = []
+    # which stop we're currently on
+    current = 'NONE'
+    for i in range(length):
+        # append the value to the trip list
+        itinerary.append(cache[current])
+        # set a new current
+        current = cache[current]
+    return itinerary
