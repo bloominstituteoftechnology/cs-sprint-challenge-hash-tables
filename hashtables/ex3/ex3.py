@@ -2,8 +2,27 @@ def intersection(arrays):
     """
     YOUR CODE HERE
     """
-    # Your code here
-
+    cache = {}
+    second_cache = {}
+    result = []
+    for value in arrays[0]:
+        cache[value] = True
+    for i in range(1,len(arrays)):
+        for value in arrays[i]:
+            try:
+                cache[value]
+            except KeyError:
+                cache[value] = False
+            second_cache[value] = True
+        for key in cache.keys():
+            if cache[key]:
+                try:
+                    second_cache[key]
+                except KeyError:
+                    cache[key] = False
+    for k,v in cache.items():
+        if v:
+            result.append(k)
     return result
 
 
