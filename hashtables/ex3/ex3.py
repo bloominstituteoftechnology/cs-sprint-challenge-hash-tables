@@ -2,7 +2,19 @@ def intersection(arrays):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    dictionary = {}
+
+    result = []
+    for i in arrays:
+        for x in i:
+            if x in dictionary:
+                dictionary[x] += 1
+            else:
+                dictionary[x] = 1
+
+    for i in dictionary:
+        if dictionary[i] >= len(arrays):
+            result.append(i)
 
     return result
 
