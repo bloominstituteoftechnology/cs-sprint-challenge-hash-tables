@@ -10,7 +10,7 @@ You are not allowed to collaborate during the sprint challenge. However, you are
 
 _You have **three hours** to complete this challenge. Plan your time accordingly._
 
-## Introduction
+## Introduction..
 
 This challenge requires you to solve algorithm problems that are amenable to being solved efficiently with a hash table.
 
