@@ -3,10 +3,10 @@ def has_negatives(a):
     a.sort()
     result = []
     for value in a:
-        if value <0:
+        if value < 0:
             cache[abs(value)] = True
     for value in a:
-        if value in cache.keys():
+        if value in cache:
             result.append(value)
     return result
 
