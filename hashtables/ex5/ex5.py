@@ -3,16 +3,18 @@
 
 
 def finder(files, queries):
-    file_cache = {}
-    query_cache = {}
+    file_splits = {}
     result = []
     for file in files:
-        split_file = file.split('/')
-        file_cache[file] = split_file[-1]
+        split = file.split("/")
+        if split[-1] not in file_splits.keys():
+            file_splits[split[-1]] = [file]
+        else:
+            file_splits[split[-1]].append(file)
     for query in queries:
-
-
-
+        if query in file_splits.keys():
+            result.append(file_splits[query])
+    result = [x for sl in result for x in sl]
     return result
 
 
