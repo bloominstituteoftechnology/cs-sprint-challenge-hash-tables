@@ -3,10 +3,15 @@
 
 
 def finder(files, queries):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    file_cache = {}
+    query_cache = {}
+    result = []
+    for file in files:
+        split_file = file.split('/')
+        file_cache[file] = split_file[-1]
+    for query in queries:
+
+
 
     return result
 
