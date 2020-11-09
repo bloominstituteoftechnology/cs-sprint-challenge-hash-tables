@@ -1,8 +1,30 @@
 def intersection(arrays):
     """
-    YOUR CODE HERE
+    Understand:
+    test file ;)
+
+    Plan:
+    Create a dict that holds the key as a number in a list.
+    The value will be the count of that number in each list.
+    Check if the dict value equals number of arrays
+    If so the number is in all and should be added to result.
+
     """
-    # Your code here
+
+    num_of_arrays = len(arrays)
+    count_dict = {}
+    result = []
+
+    for lst in arrays:
+        for num in lst:
+            if num in count_dict:
+                count_dict[num] += 1
+            else:
+                count_dict[num] = 1
+
+    for key in count_dict:
+        if count_dict[key] == num_of_arrays:
+            result.append(key)
 
     return result
 
