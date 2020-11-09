@@ -1,8 +1,22 @@
 def has_negatives(a):
     """
-    YOUR CODE HERE
+    Understand:
+    Test File
+
+    Plan:
+    sets would be wonderful here
+    since we cant use a set a dictionary will do.
+    put values into a list and compare to see if it has value needed.
     """
-    # Your code here
+
+    dict = {}
+    result = []
+
+    for num in a:
+        if num > 0:
+            dict[num] = num
+
+    result = [abs(num) for num in a if num * -1 in dict]
 
     return result
 
