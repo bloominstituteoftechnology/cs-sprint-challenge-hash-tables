@@ -5,10 +5,18 @@ class Ticket:
         self.destination = destination
 
 
-def reconstruct_trip(tickets, length):
+def reconstruct_trip(tickets, length, cache={}):
     """
     YOUR CODE HERE
     """
     # Your code here
-
+    route = [None] * length
+    for ticket in tickets:
+        cache[ticket.source] = ticket.destination
+    # Set next location to the DESTINATION of the starting point.
+    nextLocation = cache["NONE"]
+    for index in range(0, length):
+        route[index] = nextLocation
+        # Set the next location to the VALUE of the current airport, which is the next one.
+        nextLocation = cache[nextLocation]
     return route
