@@ -1,17 +1,30 @@
-# Your code here
-
-
 
 def finder(files, queries):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
-
+    storage = {}
+    result =  []
+    
+    for f in files:
+                                    #! get the path to the file
+        file_name = f.split("/")[-1]
+        if file_name in storage:
+                                    #! add or append the file path
+            storage[file_name].append(f)
+                                    #! else, leave the file path where it is
+        else:
+            storage[file_name] = [f]
+    
+                                    #! for each item in queries,
+    for q in queries:
+                                    #! if that item is in the bucket/slot,
+        if q in storage:
+                                    #! then at that item to the result
+            result += storage[q]
+    
     return result
 
 
 if __name__ == "__main__":
+    
     files = [
         '/bin/foo',
         '/bin/bar',
