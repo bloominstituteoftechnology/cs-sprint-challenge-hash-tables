@@ -3,10 +3,10 @@ def has_negatives(a):
     YOUR CODE HERE
     """
     # Your code here
-        storage, result = set(), []
+    storage, result = set(), []
     
     # for each element of array
-    for n in numbers:
+    for n in a:
         # find the negative value of numbers[n] 
         diff = 0 - n
         # if absolute values are equal to positive numbers
