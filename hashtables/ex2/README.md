@@ -31,10 +31,10 @@ tickets = [
     Ticket{ source: "XNA", destination: "CID" },
     Ticket{ source: "SFO", destination: "BHM" },
     Ticket{ source: "FLG", destination: "XNA" },
-    Ticket{ source: "NONE", destination: "LAX" },
+    Ticket{ source: "NONE", destination: "LAX" }, # first flight
     Ticket{ source: "LAX", destination: "SFO" },
     Ticket{ source: "CID", destination: "SLC" },
-    Ticket{ source: "ORD", destination: "NONE" },
+    Ticket{ source: "ORD", destination: "NONE" }, # last flight
     Ticket{ source: "SLC", destination: "PIT" },
     Ticket{ source: "BHM", destination: "FLG" }
 ]
