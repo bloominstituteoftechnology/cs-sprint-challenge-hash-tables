@@ -1,10 +1,19 @@
-def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+from collections import defaultdict
 
-    return result
+def intersection(arrays):
+    dict = defaultdict(set)
+
+    for list in arrays:
+        
+
+    result = []
+    # for num in arrays[0]:
+    #     for array in arrays:
+    #         if num in array:
+    #             result.append(num)
+                
+    set(d[0]).intersection(*d)
+    # return result
 
 
 if __name__ == "__main__":
