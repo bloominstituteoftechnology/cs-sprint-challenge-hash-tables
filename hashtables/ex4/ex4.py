@@ -1,9 +1,13 @@
 def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
-
+    cache = {}
+    a.sort()
+    result = []
+    for value in a:
+        if value < 0:
+            cache[abs(value)] = True
+    for value in a:
+        if value in cache:
+            result.append(value)
     return result
 
 

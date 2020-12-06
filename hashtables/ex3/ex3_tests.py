@@ -11,6 +11,7 @@ class TestEx2(unittest.TestCase):
             [1,4,5],
             [1,6,7]
         ])
+        print(result)
         self.assertTrue(result == [1])
 
         result = intersection([
@@ -49,6 +50,7 @@ class TestEx2(unittest.TestCase):
 
         result = intersection(arrays)
         result.sort()
+        print(result)
         self.assertTrue(result == [1,2,3])
 
 if __name__ == '__main__':
