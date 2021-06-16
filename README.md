@@ -22,12 +22,16 @@ Commit your code regularly and meaningfully. This practice helps both you (in ca
 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your answers beforehand.
 
-1. Hashing functions
-2. Collision resolution
-3. Performance of basic hash table operations
-4. Load factor
-5. Automatic resizing
-6. Various use cases for hash tables
+1. Hashing functions  -- these are functions that take the key and will map to a index in an array. This tells you where the value is found.
+2. Collision resolution -- sometimes two keys will map to the same index.  There needs to be a way to handle this.  One common way is to use 
+                            a linked list in the index of the array.
+3. Performance of basic hash table operations -- The performance of the hash table is contant o(1). Doesnt matter the size of the hash table.
+4. Load factor -- This the the amount of fullness that the underlying array in the hash table. If the fullness gets to generally 
+                   around 70 percent the array size if usually doubled.
+5. Automatic resizing -- This as was stated above occurs when the load factor reaches the critical level. Also there will be halfing of the
+                         size of the underlying array if the load factor gets to around 20 percent.
+6. Various use cases for hash tables --- They are used for storing and retrieving things that can be hard to compute (caching).  Also a way 
+                                         to make it so that you can look up items easily and quickly.
 
 We expect you to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
