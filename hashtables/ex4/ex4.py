@@ -1,8 +1,18 @@
+
 def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+   
+    result = []
+    num_count = {}
+
+    for num in a:
+        if abs(num) in num_count:
+            num_count[abs(num)] += 1
+        else:
+            num_count[abs(num)] = 1
+
+    for i in num_count:
+        if num_count[i] > 1:
+            result.append(i)
 
     return result
 
