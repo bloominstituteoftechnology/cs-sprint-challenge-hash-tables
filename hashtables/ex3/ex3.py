@@ -1,8 +1,24 @@
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    # initialize hash
+    d = {}
+    #initialize the result
+    result = []
+
+    # for all the lists passed in
+    # if a number exists in all lists
+    # append the number to the result
+    # 
+    #  
+    # another way to say this is
+    # if a number exists in ONE listm
+    # check if it exists in ALL lists
+    # if the number is in all lists, append it to the result
+
+
+
+    for i in arrays[0]:
+        
+            
 
     return result
 
