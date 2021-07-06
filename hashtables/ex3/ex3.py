@@ -1,8 +1,12 @@
+
+result1 = {}
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    result = []
+    for array in arrays:
+        for arr in array:
+            result1[arr] = arr
+            if result1[arr] == arr:
+                result.append(arr)
 
     return result
 
