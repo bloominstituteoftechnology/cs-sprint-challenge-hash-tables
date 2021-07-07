@@ -23,11 +23,22 @@ Commit your code regularly and meaningfully. This practice helps both you (in ca
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your answers beforehand.
 
 1. Hashing functions
+   A type of function that used to map pieces of data (of arbitrary size) to values of a fixed-size. These "hash values" can then be indexed onto a "hash table", which is a table of fixed size that can be used to efficiently store data for retrieval at nearly constant time, O(1).
+
 2. Collision resolution
+   A method of handling collisions, typically in a hash table. Collision is when when 2 or more values are listed as being stored in the same location. This causes a "collision" when said values are to be recalled. One strategy for resolving this is to create lists for the items.
+
 3. Performance of basic hash table operations
+
+
 4. Load factor
+   The number of keys that are stored in the hash table, divided by the capacity (the size of the array). Factor should be less than 1 to decrease the chance of collisions.
+
 5. Automatic resizing
+   As a table's load factor increases , collisions also increase, hampering the table's overall performance. By setting up a hash table to dynamically and automatically resize once a certain load factor has been exceeded, this can be prevented.
+
 6. Various use cases for hash tables
+   Hash tables can be used for searching for specific items within a large data set, finding duplicate items in a data set and also quickly sorting and retrieving  items from a large data set. 
 
 We expect you to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
