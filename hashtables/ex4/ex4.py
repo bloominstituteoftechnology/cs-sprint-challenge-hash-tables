@@ -1,8 +1,11 @@
 def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    ht = {}
+    result = []
+    for i in a:
+        ht[i] = i
+        if i != 0 and -i in ht:
+            print(i)
+            result.append(abs(i))
 
     return result
 

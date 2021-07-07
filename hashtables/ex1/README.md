@@ -5,10 +5,10 @@ weights, implement a function `get_indices_of_item_weights` that finds
 two items whose sum of weights equals the weight limit `limit`. Your
 function will return a tuple of integers that has the following form:
 
-```
+```.
 (zero, one)
 ```
-
+0
 where each element represents the item weights of the two packages.
 _**The higher index should be placed in the `zeroth` index and
 the smaller index should be placed in the `first` index.**_ If such a
