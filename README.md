@@ -23,11 +23,19 @@ Commit your code regularly and meaningfully. This practice helps both you (in ca
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your answers beforehand.
 
 1. Hashing functions
+- This is the function that returns a hashed number value as a key for the data to be stored in the hash table. Some of the key requirements includes: consistent returned value for every key hashed, different inputs return different values, and numbers returned from hash functions must at a certain range ie: all hashed numbers are 12 digit long. Hash numbers are often seemingly random and this prevents collisions with inputted data.
+
 2. Collision resolution
+- A solution to prevent inputted data in the hash tables from colliding AKA getting the same index. Frequent collisions will cause the hash table to iterate through an index, which could increase search time. The resolution is using a load factor, which sums up all of the occupied slots and divides it with total slots. If the quotient of that is 0.7, then the hash table must double in size and the items will be inputted again with the new specification. This will space out each stored value so there's less linked list traversal.
+
 3. Performance of basic hash table operations
+- Search, add, edit, delete are all O(1) (constant time). 
 4. Load factor
+- As mentioned before, it's the result of occupied slots / total slots. 0.7 warrants a doubling in hash table size. 0.2 halves the size of the table.
 5. Automatic resizing
+- Hash table calculates load factor after adds or deletes and then resizes accordingly.
 6. Various use cases for hash tables
+- Constant time retrieval of item is useful for counting words, caching data, any kind of records that uses a key value pair ie: things with names (people, books, cars), duplicate prevention (all keys are unique and cannot be aggregated when inputted again), and for completing some leet code problems to get that sweet, sweet engineer job.
 
 We expect you to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
