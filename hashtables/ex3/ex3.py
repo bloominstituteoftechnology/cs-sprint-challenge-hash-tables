@@ -2,8 +2,7 @@ def intersection(arrays):
     """
     YOUR CODE HERE
     """
-    # Your code here
-
+    result = list(set.intersection(*map(set, arrays)))
     return result
 
 
