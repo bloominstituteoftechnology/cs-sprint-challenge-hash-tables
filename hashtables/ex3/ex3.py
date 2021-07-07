@@ -2,7 +2,29 @@ def intersection(arrays):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    # $$$
+    cache = {}
+
+    # get array length
+    num_arrays = len(arrays)
+    # count occurrences and save to cache
+    # for each list in the arrays
+    for lst in arrays:
+        # for each element in list
+        for elem in lst:
+            # if the element is in cache... 
+            if elem in cache:
+                # increase the count if it exists
+                cache[elem] += 1
+            else:
+                # add to cache if it doesn't exist
+                cache[elem] = 1
+
+    result = []
+    # if the value for a key equals the number of arrays, it is in all of them
+    for key in cache:
+        if cache[key] == num_arrays:
+            result.append(key)
 
     return result
 
