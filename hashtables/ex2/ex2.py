@@ -6,9 +6,11 @@ class Ticket:
 
 
 def reconstruct_trip(tickets, length):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    tixLookup = {ticket.source: ticket.destination for ticket in tickets}
+    location = tixLookup["NONE"]
+    route = [location]
 
+    while location != "NONE":
+        location = tixLookup[location]
+        route.append(location)
     return route
