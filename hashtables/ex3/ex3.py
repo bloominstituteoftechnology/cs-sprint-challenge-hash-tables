@@ -4,6 +4,21 @@ def intersection(arrays):
     """
     # Your code here
 
+    result = []
+
+    cache = {}
+
+
+    for subarray in arrays: 
+        for num in subarray: 
+            if num not in cache:
+                cache[num] = 1
+            else: 
+                result.append(num)
+
+    result = list(dict.fromkeys(result))
+
+
     return result
 
 
