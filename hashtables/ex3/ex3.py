@@ -1,10 +1,16 @@
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+   int_dict = {}
+   
+   for list in arrays:
+       for item in list:
+           if item in int_dict:
+               int_dict[item]+= 1
+           else:
+               int_dict[item] = 1
+    
+   result = [item[0] for item in int_dict.items() if item[1] == len(arrays)]
 
-    return result
+   return result
 
 
 if __name__ == "__main__":
