@@ -1,10 +1,29 @@
 def intersection(arrays):
     """
-    YOUR CODE HERE
+    Objective - find the numbers that exist in all lists
+    Input: a list of varying length lists(limit 10) with n integers (limit 1m)
+    Output: list of ints/nums that exists in each list in any order
     """
-    # Your code here
+    # initial cache to store computations
+    cache = {}
 
-    return result
+    for arr in arrays:
+        for num in arr:
+            if num not in cache:
+                cache[num] = 1
+            else:
+                cache[num] += 1
+    
+    # initialize empty results list
+    results = []
+    
+    # iterate throgugh cache to get list
+    for num, cach in cache.items():
+        # if num exists in all the arrays
+        if cach == len(arrays):
+            results.append(num)
+    
+    return results
 
 
 if __name__ == "__main__":
