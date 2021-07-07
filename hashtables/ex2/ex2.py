@@ -7,8 +7,23 @@ class Ticket:
 
 def reconstruct_trip(tickets, length):
     """
-    YOUR CODE HERE
+    This is O(2n) (one to fill the table, one to look up the table) this rounds
+    out to O(n), linear time.
+    The space complexity is O(2n) as well, one for the table, one for the
+    return list.
     """
     # Your code here
+    # convert to a table
+    table = {}
+    for t in tickets:
+        table[t.source] = t.destination
+
+
+    route = [None] * length
+    key = 'NONE'
+    for i in range(length):
+        val = table[key]
+        route[i] = val
+        key = val
 
     return route

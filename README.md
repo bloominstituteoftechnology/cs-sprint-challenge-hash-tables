@@ -22,12 +22,18 @@ Commit your code regularly and meaningfully. This practice helps both you (in ca
 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your answers beforehand.
 
-1. Hashing functions
+1. Hashing functions  
+Just riffing since there are no provided questions. Hashing functions are the functions used to take a key value pair, and through different algorithms, transform the key into a statistically unique number, that can then be used to store the value in a particular storage location. There are a couple values and purposes to doing this. One is to have keys with more meaning than an index. Two can be for cryptographic purposes (values can't easily be found without exact keys). Three for complexity improvements leveraging the "meaningfulness" of the keys, against typical structures like arrays who's indexes are mearly position indicators.
 2. Collision resolution
+Hashing functions do not always result it 100% unique storage locations for the values.  In the instance that your hashing function will try to store two differen key value pairs in the same place, you need to implement some method to avoid overwriting. Chaining multiple values together is one way to deal with this. But that alone is not enough, and could become taxing as values are added. See load factor and resizing.
 3. Performance of basic hash table operations
+Um not sure what to say here. A hash table should have a way to put key value pairs, get key values pairs, hash in and hash out of storage, calculate load factor and resize up and down.
 4. Load factor
+Load factor is the ratio of number of values over capacity of your storage.  Basically it is an easy way to conceptualize the likely hood of running into collisions. Since it is possible to have collisions with 8 values in an 8 capacity hashtable, we can never 100% that no collisions will happen. Ultimately too many collisions are going to impact the performance of your hastable, so load factor is a way of understanding how likely you are to have collisions, and then build some logic off of that.  See Automatic resizing.
 5. Automatic resizing
+Using load factor, you can resize your hashtable to improve it's performance.  If you were only worried about avoiding collisions, you could probably instantiate a hashtable large enough that your input values never collide, but it might be huge.  Alternatively, you didn't care about the lookup speed of your has table, you could jam as many values into a small amount of storage and rely on your collision handling.  But why not find a happy medium?  You can use the load factor as a trigger point for when to shrink or grow your storage automatically, ensuring your hashtable continues to perform optimally.
 6. Various use cases for hash tables
+Key value pairs have great potential for a meaningful relationship than index element pairs. So you can use hashtables to cleverly get around problems that cause massive complexity in arrays. Clever storage can avoid brutally long searching. Cryptographic hashing algos (not all hashing is cryptographic) is good for protecting where values are stored.
 
 We expect you to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 

@@ -1,8 +1,22 @@
 def intersection(arrays):
     """
-    YOUR CODE HERE
+    Time complexity is O(2n) worst case (ones to make table, once for all 
+    inputs are dupes) round to O(n).
+    Space complexity is O(n). table will get larger by unique values and 
+    proportionally results will get smaller
     """
     # Your code here
+    table = {}
+
+    for arr in arrays:
+        for ele in arr:
+            table[ele] = table.get(ele, 0) + 1
+
+    result = []
+
+    for key in table:
+        if table[key] > 1:
+            result.append(key)
 
     return result
 
