@@ -1,8 +1,16 @@
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    my_dict = {}
+    result = []
+
+    for array in arrays:
+        for element in array:
+            if element not in my_dict:
+                my_dict[element] = 1
+            else:
+                my_dict[element] += 1
+
+            if my_dict[element] == len(arrays):
+                result.append(element)
 
     return result
 
