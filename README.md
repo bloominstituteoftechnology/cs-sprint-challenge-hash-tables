@@ -1,4 +1,6 @@
 # Sprint Challenge: Hash Tables
+### [  https://github.com/LambdaSchool/cs-sprint-challenge-hash-tables/pull/184   ]
+### INITIAL  COMMIT
 
 **Read these instructions carefully. Understand exactly what is expected _before_ starting this Sprint Challenge.**
 
